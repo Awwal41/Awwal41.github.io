@@ -80,6 +80,44 @@
     });
   }
 
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function setStat(node, value) {
+    var target = Number(value);
+    if (!node || !isFinite(target)) return;
+    if (node.dataset.value === String(target) && node.textContent === String(target)) return;
+    node.dataset.value = String(target);
+    if (reduceMotion) {
+      node.textContent = String(target);
+      return;
+    }
+    var start = performance.now();
+    function frame(now) {
+      var t = Math.min(1, (now - start) / 800);
+      var eased = 1 - Math.pow(1 - t, 3);
+      node.textContent = String(Math.round(target * eased));
+      if (t < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  setStat(stats.citations, stats.citations.textContent);
+  setStat(stats.h, stats.h.textContent);
+  setStat(stats.i10, stats.i10.textContent);
+
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    var observed = document.querySelectorAll(".band, .about-photo, .section-head, .item, .also");
+    observed.forEach(function (node) { node.classList.add("await"); });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("shown");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.16 });
+    observed.forEach(function (node) { observer.observe(node); });
+  }
+
   fetch("data/live.json", { cache: "no-cache" })
     .then(function (response) {
       if (!response.ok) throw new Error("missing live.json");
@@ -87,9 +125,9 @@
     })
     .then(function (data) {
       var scholar = data.scholar || {};
-      if (scholar.citations != null) stats.citations.textContent = scholar.citations;
-      if (scholar.hIndex != null) stats.h.textContent = scholar.hIndex;
-      if (scholar.i10Index != null) stats.i10.textContent = scholar.i10Index;
+      if (scholar.citations != null) setStat(stats.citations, scholar.citations);
+      if (scholar.hIndex != null) setStat(stats.h, scholar.hIndex);
+      if (scholar.i10Index != null) setStat(stats.i10, scholar.i10Index);
       renderWorks(data.works);
       renderRepos(data.repos);
       var colophon = document.getElementById("colophon");

@@ -119,15 +119,6 @@
       "homepage": ""
     },
     {
-      "name": "Awwal41.github.io",
-      "description": "Personal site: research, software, and a weekly refresh of papers and public code.",
-      "language": "HTML",
-      "url": "https://github.com/Awwal41/Awwal41.github.io",
-      "stars": 0,
-      "updated": "2026-10-22",
-      "homepage": ""
-    },
-    {
       "name": "Droplet-Film-Theory-Development",
       "description": "Physics-informed droplet-film model for liquid loading in gas wells, with public documentation.",
       "language": "Jupyter Notebook",
