@@ -57,7 +57,7 @@
           <p class="item-meta"><span>2026</span><span>Research</span></p>
           <h3>TurboChIMES</h3>
           <p class="stake">A designer can try more chemistries before a long campaign.</p>
-          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
+          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. The plots below are that comparison on carbon monoxide. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
           <p class="links"><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">Preprint</a></p>
         </article>
         <article>
@@ -75,6 +75,14 @@
           <p class="links"><a href="https://github.com/Awwal41/MaterialSim">Source</a></p>
         </article>
       </div>
+
+      <figure class="compare">
+        <div class="compare-grid">
+          <img src="assets/turbo-pareto.png" width="1092" height="720" alt="Scatter plot of force error against CPU time for carbon monoxide at 128 atoms. The multi-layer TurboChIMES point is faster and lower error than the single-layer baseline, MACE-MP-0, CHGNet, SevenNet-0, and ORB-v3.">
+          <img src="assets/turbo-scaling.png" width="1092" height="720" alt="CPU time per atom-step for carbon monoxide at 2400 K, from a small cell to 8192 atoms. The multi-layer TurboChIMES line stays the fastest. The single-layer baseline, MACE-MP-0, CHGNet, SevenNet-0, ORB-v3, and MatterSim are slower at every size.">
+        </div>
+        <figcaption>Carbon monoxide. Multi-layer is TurboChIMES, and single-layer is the one-model baseline. The other marks are foundation potentials. At 128 atoms the multi-layer model is the fast, low-error point. At 2400 K that speed holds out to 8,192 atoms.</figcaption>
+      </figure>
 
       <div class="section-head section-follow" id="approach">
         <h2>How the work gets done</h2>

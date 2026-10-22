@@ -421,6 +421,29 @@ h1 {
 
 .featured p { margin: 0.7rem 0 0; }
 
+.compare { margin: 1.75rem 0 0; }
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.compare img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.compare figcaption {
+  max-width: 46rem;
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .section-follow { margin-top: 3.2rem; }
 
 .moves {
@@ -692,7 +715,7 @@ footer ul {
   .portrait { grid-column: 1; grid-row: auto; max-width: 16rem; }
   .about { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .featured, .moves { grid-template-columns: 1fr; }
+  .featured, .moves, .compare-grid { grid-template-columns: 1fr; }
   .cv-head, .cv-list li { grid-template-columns: 1fr; }
   .cv-head img { max-width: 10rem; }
   .steps li, .section-head, .item, .papers li, .talks li, .repos li, footer {
