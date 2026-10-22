@@ -298,6 +298,14 @@ def main() -> int:
         "works": works,
         "repos": repos,
     }
+    unchanged = (
+        previous.get("scholar") == live["scholar"]
+        and previous.get("works") == live["works"]
+        and previous.get("repos") == live["repos"]
+    )
+    if unchanged:
+        print(f"Already current: {len(works)} works and {len(repos)} public repositories.")
+        return 0
     save_json(LIVE_PATH, live)
     print(f"Wrote {len(works)} works and {len(repos)} public repositories.")
     return 0
