@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-22T00:58:35Z",
+  "generatedAt": "2026-10-22T01:05:29Z",
   "scholar": {
     "profile": "https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en",
     "citations": 44,
     "hIndex": 4,
     "i10Index": 1,
-    "fetchedAt": "2026-10-22"
+    "fetchedAt": "2026-10-21"
   },
   "works": [
     {
@@ -116,6 +116,15 @@
       "url": "https://github.com/Awwal41/MaterialSim",
       "stars": 3,
       "updated": "2026-07-08",
+      "homepage": ""
+    },
+    {
+      "name": "Awwal41.github.io",
+      "description": "Personal site: research, software, and a weekly refresh of papers and public code.",
+      "language": "HTML",
+      "url": "https://github.com/Awwal41/Awwal41.github.io",
+      "stars": 0,
+      "updated": "2026-10-22",
       "homepage": ""
     },
     {
