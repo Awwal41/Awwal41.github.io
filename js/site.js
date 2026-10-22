@@ -1,5 +1,6 @@
 (function () {
   var stats = {
+    contrib: document.getElementById("stat-contrib"),
     citations: document.getElementById("stat-citations"),
     h: document.getElementById("stat-h"),
     i10: document.getElementById("stat-i10")
@@ -101,6 +102,7 @@
     requestAnimationFrame(frame);
   }
 
+  setStat(stats.contrib, stats.contrib.textContent);
   setStat(stats.citations, stats.citations.textContent);
   setStat(stats.h, stats.h.textContent);
   setStat(stats.i10, stats.i10.textContent);
@@ -127,7 +129,13 @@
     }
     var total = Number(calendar.total || 0);
     var noun = total === 1 ? "public contribution" : "public contributions";
-    caption.textContent = total + " " + noun + " in the last year on GitHub.";
+    caption.replaceChildren();
+    var profile = document.createElement("a");
+    profile.href = "https://github.com/Awwal41";
+    profile.appendChild(text(total.toLocaleString("en-US") + " " + noun));
+    caption.appendChild(profile);
+    caption.appendChild(text(" in the last year."));
+    if (stats.contrib) setStat(stats.contrib, total);
     grid.replaceChildren();
     grid.setAttribute("aria-label", caption.textContent);
     weeks.forEach(function (week) {

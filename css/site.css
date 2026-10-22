@@ -100,19 +100,18 @@ main {
 
 .hero .kicker,
 .hero h1,
-.hero .lede,
-.hero .stats,
-.hero .identity { grid-column: 1; }
+.hero-copy { grid-column: 1; }
+
+.hero .contrib { grid-column: 1 / -1; margin-top: 2rem; }
 
 .hero .kicker { animation: rise 0.8s ease both; }
 .hero h1 { animation: rise 0.9s ease 0.08s both; }
-.hero .lede { animation: rise 0.9s ease 0.16s both; }
-.hero .stats { animation: rise 0.9s ease 0.24s both; }
-.hero .identity { animation: rise 0.9s ease 0.32s both; }
+.hero-copy { animation: rise 0.9s ease 0.16s both; }
+.hero .contrib { animation: rise 1s ease 0.28s both; }
 
 .portrait {
   grid-column: 2;
-  grid-row: 1 / span 5;
+  grid-row: 1 / span 3;
   align-self: start;
   margin: 0.4rem 0 0;
   animation: rise 1s ease 0.12s both;
@@ -373,21 +372,25 @@ h1 {
   line-height: 1.02;
 }
 
-.lede {
+.lede,
+.lede-next {
   max-width: var(--measure);
-  margin: 1.5rem 0 0;
+  margin: 1.15rem 0 0;
   font-family: "Newsreader", Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.28rem;
   font-weight: 400;
   line-height: 1.45;
   color: var(--muted);
 }
 
+.lede { margin-top: 1.4rem; font-size: 1.35rem; color: var(--ink); }
+
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 10rem));
-  gap: 1.5rem;
-  margin: 2.2rem 0 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0 0;
+  max-width: 40rem;
 }
 
 .stats div { border-top: 1px solid var(--line); padding-top: 0.7rem; }
@@ -577,7 +580,7 @@ footer ul {
   .hero { padding-top: 2.4rem; grid-template-columns: 1fr; }
   .portrait { grid-column: 1; grid-row: auto; max-width: 16rem; }
   .about { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .steps li, .section-head, .item, .papers li, .talks li, .repos li, footer {
     grid-template-columns: 1fr;
   }
@@ -594,9 +597,8 @@ footer ul {
   html { scroll-behavior: auto; }
   .hero .kicker,
   .hero h1,
-  .hero .lede,
-  .hero .stats,
-  .hero .identity,
+  .hero-copy,
+  .hero .contrib,
   .portrait,
   .band img {
     animation: none;
