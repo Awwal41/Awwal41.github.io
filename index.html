@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Awwal Oladipupo — Chemical engineering, models, and software</title>
-  <meta name="description" content="Awwal Oladipupo is a chemical engineering PhD candidate at the University of Michigan. He builds machine-learned interatomic models and the software around them.">
+  <title>Awwal Oladipupo — Scientific software, HPC, and applied AI</title>
+  <meta name="description" content="Awwal Oladipupo builds scientific software for HPC, applied AI tied to physics or sources, and the backend services in front of both. PhD candidate, University of Michigan.">
   <meta name="author" content="Awwal Oladipupo">
   <meta name="theme-color" content="#efeae2">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -18,6 +18,8 @@
   <header class="top">
     <a class="mark" href="#top">Awwal Oladipupo</a>
     <nav aria-label="Page">
+      <a href="#approach">Approach</a>
+      <a href="#practice">Practice</a>
       <a href="#work">Work</a>
       <a href="#research">Research</a>
       <a href="#code">Code</a>
@@ -30,10 +32,10 @@
       <p class="kicker">Chemical engineering · University of Michigan</p>
       <h1>Models for matter, and the software that makes them usable.</h1>
       <figure class="portrait">
-        <img src="assets/portrait.jpg" alt="Awwal Oladipupo outdoors on campus, in a brown jacket over a blue plaid shirt." width="460" height="460">
-        <figcaption>Ann Arbor</figcaption>
+        <img src="assets/portrait.jpg" alt="Studio headshot of Awwal Oladipupo in a navy blazer and peach shirt, against a gray backdrop." width="819" height="1024">
+        <figcaption>University of Michigan</figcaption>
       </figure>
-      <p class="lede">Atomistic simulation is believable and still too slow to try the materials a designer actually wants. I am a PhD candidate in the Lindsey Lab and a MICDE fellow, and I build machine-learned interatomic models, plus the software around them, so a researcher can cover more chemistry and still trust the physics.</p>
+      <p class="lede">Atomistic simulation is believable and still too slow to try the materials a designer wants. I build the scientific software around that problem: models that run on a laptop and on a cluster, AI that stays tied to the physics or the source, and backend services with a stable interface in front of both. I am a PhD candidate in the Lindsey Lab and a MICDE fellow. The potentials are written so groups at Michigan, and national-lab collaborators such as the Lawrence Livermore coauthors on the transfer-learning paper, can run them on the SLURM clusters they already operate.</p>
       <dl class="stats" id="stats">
         <div>
           <dt>Google Scholar citations</dt>
@@ -53,6 +55,7 @@
         <li>MICDE Fellow, 2026–2027</li>
         <li>People’s Choice, Three Minute Thesis, 2025</li>
         <li>BSc, Chemical and Petroleum Engineering, University of Lagos</li>
+        <li>Scientific HPC, applied AI, backend services</li>
       </ul>
     </section>
 
@@ -64,7 +67,7 @@
     <section class="about" aria-labelledby="about-title">
       <div class="prose">
         <h2 id="about-title">About</h2>
-        <p>Wells lose production when liquid loads the tubing or sand comes up with the flow. From the University of Lagos through later collaborations, my papers use field data and models to see liquid loading, sand, and hydrate temperature early enough to act, and to weigh oil recovery together with carbon storage. A related study improves biodiesel yield from waste fat by pairing experiment with computation.</p>
+        <p>Wells lose production when liquid loads the tubing or sand comes up with the flow. From the University of Lagos through later collaborations, my papers use field data and models to see liquid loading, sand, and hydrate temperature early enough to act, and to weigh oil recovery together with carbon storage. Those losses are how domestic wells go offline, and the recovery work keeps carbon storage inside that same field decision. A related study improves biodiesel yield from waste fat by pairing experiment with computation.</p>
         <p>At Michigan the bottleneck moved from the well to the simulation: the physics is trustworthy, and the setup is slow. I build public agents and research codes, and private tools for documents and for running models on a laptop, a cluster, or a phone. Private work is described at the level of the contribution, and the repository stays closed.</p>
       </div>
       <figure class="about-photo">
@@ -72,10 +75,85 @@
       </figure>
     </section>
 
+    <section id="approach" aria-labelledby="approach-title">
+      <div class="section-head">
+        <h2 id="approach-title">How I take a problem apart</h2>
+        <p>The same four moves show up in the papers, the agents, and the services. The projects further down are where they were tested.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div class="step-body">
+            <h3>Keep what must stay true</h3>
+            <p>I start from the constraint that cannot move. In the research that constraint is the physics. In a document system it is the source. In a protected environment it is the boundary. I spend the effort on the cost: a layered model, a reused fit, a model that runs locally. What remains is a result someone can still trust.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-body">
+            <h3>Run it here, then on the cluster</h3>
+            <p>The first version has to run on the machine in front of you. EZRA, MaterialSim, and the retrieval services all start there, and that same path is what moves onto SLURM, Docker, or Kubernetes. A person can try the tool before they request an allocation or a deployment.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-body">
+            <h3>Hide the hard part behind a plain interface</h3>
+            <p>The person who built the model should not be required for every later use. I wrap the hard part in a sentence, an API, or a calculator an existing simulator can call. MaterialSim, the ChIMES handoff, and the services behind the private tools all do this. More people can use the system, and the internals can change while the interface stays put.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-body">
+            <h3>Leave the evidence on the result</h3>
+            <p>A result that cannot be checked will not be used for a real decision. Retrieval points at the passage. A Bayesian net carries its uncertainty. A review stack inspects untrusted text before it crosses into a protected system. The reader can see why the answer deserves weight.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="practice" aria-labelledby="practice-title">
+      <div class="section-head">
+        <h2 id="practice-title">Where that work sits</h2>
+        <p>Scientific software on HPC systems, applied AI, and the backend that makes either of them usable by someone else.</p>
+      </div>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>HPC</span>
+          <span>Scientific software</span>
+        </div>
+        <div class="item-body">
+          <h3>From a desk model to a cluster job</h3>
+          <p>A potential, a fitter, and a batch system fail when each one is a separate dialect. I work across that stack: machine-learned interatomic potentials, active learning and least-squares fitting in ChIMES, molecular dynamics through MaterialSim, and SLURM staging in EZRA. A model developed at a desk at Michigan can be the job that runs on the SLURM cluster a lab already has, with the physics still the thing being computed.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>AI</span>
+          <span>Models and agents</span>
+        </div>
+        <div class="item-body">
+          <h3>AI that still answers to the science</h3>
+          <p>A model that loses the question it was built to answer is a dead end. I build agents that run simulations from ordinary language, local and on-device language models, retrieval that cites the page, and the interatomic models themselves, including TurboChIMES and hierarchical transfer learning. The AI serves a decision, and the physics or the source stays visible beside the answer.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>Backend</span>
+          <span>Services</span>
+        </div>
+        <div class="item-body">
+          <h3>A stable interface in front of a moving model</h3>
+          <p>A model still needs ingestion, an API, and a client that does not depend on the model’s private shape. I have built retrieval services packaged for Docker, Kubernetes, and cloud accounts, desktop and web clients in front of them, and private product services in TypeScript. Callers get a contract they can build on. The model and the data can change behind it.</p>
+        </div>
+      </article>
+
+      <p class="tools">Day to day that is Python and TypeScript, REST services, Docker and Kubernetes, SLURM, molecular dynamics, and machine-learned interatomic potentials.</p>
+    </section>
+
     <section id="work" aria-labelledby="work-title">
       <div class="section-head">
         <h2 id="work-title">Selected work</h2>
-        <p>Research first, then the products and tools. Private items are labeled, and the repository stays closed.</p>
+        <p>Open a title to read the fuller account. One project stays open at a time. Private items are labeled, and the repository stays closed.</p>
       </div>
 
       <article class="item">
@@ -84,9 +162,16 @@
           <span>Research</span>
         </div>
         <div class="item-body">
-          <h3>TurboChIMES</h3>
-          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. A designer can try more chemistries before a long campaign. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
-          <p class="links"><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">Preprint</a></p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">TurboChIMES</span>
+              <span class="stake">A designer can try more chemistries before a long campaign.</span>
+            </summary>
+            <div class="fold-more">
+              <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
+              <p class="links"><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">Preprint</a></p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -96,9 +181,16 @@
           <span>Research</span>
         </div>
         <div class="item-body">
-          <h3>Hierarchical transfer learning</h3>
-          <p>A new chemistry usually means fitting an interatomic model all over again, and that fit is the slow, expensive part. With Rebecca Lindsey and colleagues at Lawrence Livermore, I am second author on a paper in npj Computational Materials that carries what a model has already learned into the next system. Labs can reach a usable potential with less data and less compute.</p>
-          <p class="links"><a href="https://doi.org/10.1038/s41524-025-01863-4">Paper</a></p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">Hierarchical transfer learning</span>
+              <span class="stake">Labs can reach a usable potential with less data and less compute.</span>
+            </summary>
+            <div class="fold-more">
+              <p>A new chemistry usually means fitting an interatomic model all over again, and that fit is the slow, expensive part. With Rebecca Lindsey and colleagues at Lawrence Livermore, I am second author on a paper in npj Computational Materials that carries what a model has already learned into the next system.</p>
+              <p class="links"><a href="https://doi.org/10.1038/s41524-025-01863-4">Paper</a></p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -108,8 +200,15 @@
           <span>Research</span>
         </div>
         <div class="item-body">
-          <h3>Alchemical compression</h3>
-          <p>Every added element multiplies the training burden of a machine-learned potential, so coverage stays narrow. With T. Sundberg and Rebecca Lindsey I am compressing that elemental space so one potential can span more of the periodic table. Materials design can then reach a wider set of elements. The direction is public as a 2026 AIChE contribution.</p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">Alchemical compression</span>
+              <span class="stake">Materials design can reach a wider set of elements.</span>
+            </summary>
+            <div class="fold-more">
+              <p>Every added element multiplies the training burden of a machine-learned potential, so coverage stays narrow. With T. Sundberg and Rebecca Lindsey I am compressing that elemental space so one potential can span more of the periodic table. The direction is public as a 2026 AIChE contribution.</p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -119,9 +218,16 @@
           <span>Software</span>
         </div>
         <div class="item-body">
-          <h3>MaterialSim</h3>
-          <p>A molecular-dynamics study still begins as a specialist’s input deck. MaterialSim is a public agent that turns one sentence into the simulation, computes properties such as structure and transport, and explains what came back. The engine runs locally, so a researcher gets a real run and an interpretation in the same conversation.</p>
-          <p class="links"><a href="https://github.com/Awwal41/MaterialSim">Source</a></p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">MaterialSim</span>
+              <span class="stake">A researcher gets a real local run and an interpretation in the same conversation.</span>
+            </summary>
+            <div class="fold-more">
+              <p>A molecular-dynamics study still begins as a specialist’s input deck. MaterialSim is a public agent that turns one sentence into the simulation, computes properties such as structure and transport, and explains what came back. The engine runs locally.</p>
+              <p class="links"><a href="https://github.com/Awwal41/MaterialSim">Source</a></p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -132,8 +238,15 @@
           <span class="private">Private</span>
         </div>
         <div class="item-body">
-          <h3>EZRA</h3>
-          <p>Open language models are free, and getting one installed, pointed at your papers, and onto a cluster is still its own project. EZRA downloads a model, runs an agent on the machine in front of you, prepares documents for that model, and stages the same job on SLURM. A materials or chemistry researcher can work locally the same day and reuse the workflow on the cluster.</p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">EZRA</span>
+              <span class="stake">A researcher can work locally the same day and send that same job to a cluster.</span>
+            </summary>
+            <div class="fold-more">
+              <p>Open language models are free, and getting one installed, pointed at your papers, and onto a cluster is still its own project. EZRA downloads a model, runs an agent on the machine in front of you, prepares documents for that model, and stages the same job on SLURM.</p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -143,12 +256,19 @@
           <span>Research</span>
         </div>
         <div class="item-body">
-          <h3>Droplet-film model for liquid loading</h3>
-          <p>When gas in a well slows down, liquid falls back, pressure rises, and production can stop. I built a physics-informed model of the droplet film behind that failure, with public documentation, extending the liquid-loading study I published with Kingsley Abhulimen. The aim is to see the loading early enough to act before a shutdown.</p>
-          <p class="links">
-            <a href="https://awwal41.github.io/Droplet-Film-Theory-Development/">Documentation</a>
-            <a href="https://doi.org/10.1007/s13202-022-01525-x">2022 paper</a>
-          </p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">Droplet-film model for liquid loading</span>
+              <span class="stake">See liquid loading in a gas well early enough to act before a shutdown.</span>
+            </summary>
+            <div class="fold-more">
+              <p>When gas in a well slows down, liquid falls back, pressure rises, and production can stop. I built a physics-informed model of the droplet film behind that failure, with public documentation, extending the liquid-loading study I published with Kingsley Abhulimen.</p>
+              <p class="links">
+                <a href="https://awwal41.github.io/Droplet-Film-Theory-Development/">Documentation</a>
+                <a href="https://doi.org/10.1007/s13202-022-01525-x">2022 paper</a>
+              </p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -158,12 +278,19 @@
           <span>Research</span>
         </div>
         <div class="item-body">
-          <h3>Sand production</h3>
-          <p>Sand produced with oil or gas wears out equipment and cuts a well’s output, and the warning often arrives after the damage. My first-author paper in Petroleum Science and Engineering uses field data to predict and manage that sand, on top of public notebooks for reservoir rock typing. Operators get a clearer view of which wells need attention.</p>
-          <p class="links">
-            <a href="https://doi.org/10.11648/j.pse.20250902.13">Paper</a>
-            <a href="https://github.com/Awwal41/RockTyping">Rock typing</a>
-          </p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">Sand production</span>
+              <span class="stake">Operators get a clearer view of which wells need attention.</span>
+            </summary>
+            <div class="fold-more">
+              <p>Sand produced with oil or gas wears out equipment and cuts a well’s output, and the warning often arrives after the damage. My first-author paper in Petroleum Science and Engineering uses field data to predict and manage that sand, on top of public notebooks for reservoir rock typing.</p>
+              <p class="links">
+                <a href="https://doi.org/10.11648/j.pse.20250902.13">Paper</a>
+                <a href="https://github.com/Awwal41/RockTyping">Rock typing</a>
+              </p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -174,8 +301,15 @@
           <span class="private">Private</span>
         </div>
         <div class="item-body">
-          <h3>Edna</h3>
-          <p>A question about a long technical archive is only useful when the answer can be traced to a page. Edna is a private assistant with a desktop app and a web client: you choose the folders, ask, and the reply points at the passage it used. The archive stays searchable, and the source stays attached, on one computer or on a service you run.</p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">Edna</span>
+              <span class="stake">The archive stays searchable, and every answer stays attached to its source.</span>
+            </summary>
+            <div class="fold-more">
+              <p>A question about a long technical archive is only useful when the answer can be traced to a page. Edna is a private assistant with a desktop app and a web client: you choose the folders, ask, and the reply points at the passage it used. It can run on one computer or as a service you operate.</p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -185,25 +319,84 @@
           <span>Software</span>
         </div>
         <div class="item-body">
-          <h3>ChIMES toolchain</h3>
-          <p>A machine-learned interatomic model helps only after it can be fit, checked, and called from the simulator a lab already trusts. I work in the public ChIMES stack that does the active learning, the least-squares fit, and the handoff into outside codes. The model can leave the notebook and run inside an existing simulation.</p>
-          <p class="links">
-            <a href="https://github.com/Awwal41/al_driver-LLfork">Active learning</a>
-            <a href="https://github.com/Awwal41/chimes_lsq-LLfork">Fitting</a>
-            <a href="https://github.com/Awwal41/chimes_calculator-LLfork">Calculator</a>
-          </p>
+          <details class="fold">
+            <summary>
+              <span class="fold-title">ChIMES toolchain</span>
+              <span class="stake">The model can leave the notebook and run inside a simulator a lab already trusts.</span>
+            </summary>
+            <div class="fold-more">
+              <p>A machine-learned interatomic model helps only after it can be fit, checked, and called from the simulator a lab already trusts. I work in the public ChIMES stack that does the active learning, the least-squares fit, and the handoff into outside codes.</p>
+              <p class="links">
+                <a href="https://github.com/Awwal41/al_driver-LLfork">Active learning</a>
+                <a href="https://github.com/Awwal41/chimes_lsq-LLfork">Fitting</a>
+                <a href="https://github.com/Awwal41/chimes_calculator-LLfork">Calculator</a>
+              </p>
+            </div>
+          </details>
         </div>
       </article>
 
       <div class="also">
         <h3>Also</h3>
         <ul>
-          <li><strong>On-device models.</strong> Private. Some conversations should stay on the device. I added local language models to an assistant, so the reply is produced there and the session stays with the person.</li>
-          <li><strong>Calibrated neural nets.</strong> Private. A lone prediction hides how unsure the model is. I prototyped Bayesian neural networks so the uncertainty travels with the answer, which matters when the data are scarce.</li>
-          <li><strong>Review before entry.</strong> Private. Untrusted text can reach a system that should have stayed sealed. I designed a stack that reviews that text first, so the protected environment only receives what has been checked.</li>
-          <li><strong>Architecture notes, as a site.</strong> Private. Diagrams drift away from the code they describe. I built a site that renders them from the repository, so the team reads the picture that matches the current commit.</li>
-          <li><strong>A wedding website.</strong> Guests needed the story, the registry, and the day-of details on a phone. I built the site so that information is in their pocket. <a href="https://github.com/Awwal41/wedin">Source</a></li>
-          <li><strong>Early Android apps.</strong> I needed to learn how a finished mobile app fits together, so I shipped a quiz, weather, interval training, drawing, places, and a project board. They are listed under public code.</li>
+          <li>
+            <details class="fold fold-brief">
+              <summary>
+                <span class="fold-title">On-device models</span>
+                <span class="private">Private</span>
+                <span class="stake">Some conversations should stay on the device.</span>
+              </summary>
+              <p>I added local language models to an assistant, so the reply is produced there and the session stays with the person.</p>
+            </details>
+          </li>
+          <li>
+            <details class="fold fold-brief">
+              <summary>
+                <span class="fold-title">Calibrated neural nets</span>
+                <span class="private">Private</span>
+                <span class="stake">The uncertainty travels with the answer when data are scarce.</span>
+              </summary>
+              <p>A lone prediction hides how unsure the model is. I prototyped Bayesian neural networks so that uncertainty is part of the result.</p>
+            </details>
+          </li>
+          <li>
+            <details class="fold fold-brief">
+              <summary>
+                <span class="fold-title">Review before entry</span>
+                <span class="private">Private</span>
+                <span class="stake">A protected environment only receives text that has been checked.</span>
+              </summary>
+              <p>Untrusted text can reach a system that should have stayed sealed. I designed a stack that reviews that text first.</p>
+            </details>
+          </li>
+          <li>
+            <details class="fold fold-brief">
+              <summary>
+                <span class="fold-title">Architecture notes, as a site</span>
+                <span class="private">Private</span>
+                <span class="stake">The team reads the diagram that matches the current commit.</span>
+              </summary>
+              <p>Diagrams drift away from the code they describe. I built a site that renders them from the repository.</p>
+            </details>
+          </li>
+          <li>
+            <details class="fold fold-brief">
+              <summary>
+                <span class="fold-title">A wedding website</span>
+                <span class="stake">Guests get the story, the registry, and the day-of details on a phone.</span>
+              </summary>
+              <p>I built the site so that information is in their pocket. <a href="https://github.com/Awwal41/wedin">Source</a></p>
+            </details>
+          </li>
+          <li>
+            <details class="fold fold-brief">
+              <summary>
+                <span class="fold-title">Early Android apps</span>
+                <span class="stake">A quiz, weather, training, drawing, places, and a project board, shipped as finished apps.</span>
+              </summary>
+              <p>I needed to learn how a complete mobile app fits together. They are listed under public code.</p>
+            </details>
+          </li>
         </ul>
       </div>
     </section>
@@ -248,6 +441,12 @@
         <h2 id="code-title">Public code</h2>
         <p>Original public repositories on <a href="https://github.com/Awwal41">GitHub</a>. Course forks and other people’s projects stay on GitHub. Private repositories stay in this page’s prose.</p>
       </div>
+      <figure class="contrib" id="contrib">
+        <figcaption id="contrib-caption">Public GitHub contributions for the last year.</figcaption>
+        <div class="contrib-scroll">
+          <div class="contrib-grid" id="contrib-grid"></div>
+        </div>
+      </figure>
       <ul class="repos" id="repos">
         <li class="pending">Loading repositories…</li>
       </ul>
@@ -258,6 +457,7 @@
     <div>
       <p class="footer-name">Awwal Oladipupo</p>
       <p>Ann Arbor, Michigan</p>
+      <p>Open to scientific software, HPC, and applied AI roles.</p>
     </div>
     <ul>
       <li><a href="mailto:awwalola@umich.edu">awwalola@umich.edu</a></li>

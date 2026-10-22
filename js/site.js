@@ -105,8 +105,49 @@
   setStat(stats.h, stats.h.textContent);
   setStat(stats.i10, stats.i10.textContent);
 
+  var folds = document.querySelectorAll("#work details.fold");
+  folds.forEach(function (fold) {
+    fold.addEventListener("toggle", function () {
+      if (!fold.open) return;
+      folds.forEach(function (other) {
+        if (other !== fold) other.open = false;
+      });
+    });
+  });
+
+  function renderContributions(calendar) {
+    var caption = document.getElementById("contrib-caption");
+    var grid = document.getElementById("contrib-grid");
+    if (!caption || !grid) return;
+    var weeks = calendar && calendar.weeks;
+    if (!weeks || !weeks.length) {
+      caption.textContent = "The contribution calendar is unavailable right now.";
+      grid.replaceChildren();
+      return;
+    }
+    var total = Number(calendar.total || 0);
+    var noun = total === 1 ? "public contribution" : "public contributions";
+    caption.textContent = total + " " + noun + " in the last year on GitHub.";
+    grid.replaceChildren();
+    grid.setAttribute("aria-label", caption.textContent);
+    weeks.forEach(function (week) {
+      var column = document.createElement("div");
+      column.className = "contrib-week";
+      (week || []).forEach(function (day) {
+        var count = Number(day.count || 0);
+        var cell = document.createElement("span");
+        cell.className = "contrib-day";
+        cell.style.backgroundColor = day.color || "#ebedf0";
+        var dayNoun = count === 1 ? "contribution" : "contributions";
+        cell.title = (day.date || "Day") + ": " + count + " " + dayNoun;
+        column.appendChild(cell);
+      });
+      grid.appendChild(column);
+    });
+  }
+
   if (!reduceMotion && "IntersectionObserver" in window) {
-    var observed = document.querySelectorAll(".band, .about-photo, .section-head, .item, .also");
+    var observed = document.querySelectorAll(".band, .about-photo, .section-head, .steps li, .item, .also");
     observed.forEach(function (node) { node.classList.add("await"); });
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -130,6 +171,7 @@
       if (scholar.i10Index != null) setStat(stats.i10, scholar.i10Index);
       renderWorks(data.works);
       renderRepos(data.repos);
+      renderContributions(data.contributions);
       var colophon = document.getElementById("colophon");
       if (data.generatedAt && colophon) {
         colophon.textContent = "Publications and public repositories refresh every Monday. Last built " + data.generatedAt.slice(0, 10) + ".";

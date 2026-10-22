@@ -113,6 +113,7 @@ main {
 .portrait {
   grid-column: 2;
   grid-row: 1 / span 5;
+  align-self: start;
   margin: 0.4rem 0 0;
   animation: rise 1s ease 0.12s both;
 }
@@ -120,9 +121,10 @@ main {
 .portrait img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 22%;
   background: var(--paper-deep);
   box-shadow: 0 18px 40px rgba(28, 25, 21, 0.12);
 }
@@ -186,6 +188,147 @@ main {
 
 .top nav a:hover::after,
 .top nav a:focus-visible::after { transform: scaleX(1); }
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(16rem, 1fr);
+  gap: 0.4rem 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  grid-column: 1;
+  grid-row: 1;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.45rem;
+  color: var(--umber);
+  line-height: 1.2;
+}
+
+.step-body {
+  grid-column: 2;
+  min-width: 0;
+  max-width: 42rem;
+}
+
+.step-body h3 { margin: 0 0 0.35rem; font-size: 1.45rem; }
+
+.step-body p {
+  margin: 0;
+  max-width: 62ch;
+  overflow-wrap: break-word;
+}
+
+.tools {
+  max-width: 46rem;
+  margin: 1.4rem 0 0;
+  color: var(--muted);
+}
+
+.fold summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.fold summary::-webkit-details-marker { display: none; }
+
+.fold summary::marker { content: ""; }
+
+.fold-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.stake {
+  display: block;
+  max-width: 62ch;
+  margin-top: 0.35rem;
+  color: var(--ink);
+  font-family: "Public Sans", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+.fold summary::after {
+  content: "Read";
+  float: right;
+  margin-left: 1rem;
+  color: var(--umber);
+  font-family: "Public Sans", "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.fold[open] > summary::after { content: "Close"; }
+
+.fold summary:focus-visible {
+  outline: 2px solid var(--umber);
+  outline-offset: 4px;
+}
+
+.fold-more { margin-top: 0.8rem; }
+
+.fold-more p { margin: 0; max-width: 62ch; }
+
+.fold-more .links { margin-top: 0.7rem; }
+
+.also .fold-title {
+  font-family: "Public Sans", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.also .fold summary::after { float: none; }
+
+.contrib { margin: 0 0 1.6rem; }
+
+.contrib figcaption {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+}
+
+.contrib-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 0.3rem;
+}
+
+.contrib-grid {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+}
+
+.contrib-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contrib-day {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+}
 
 .item { transition: background 0.35s ease; }
 
@@ -435,8 +578,13 @@ footer ul {
   .portrait { grid-column: 1; grid-row: auto; max-width: 16rem; }
   .about { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .section-head, .item, .papers li, .talks li, .repos li, footer {
+  .steps li, .section-head, .item, .papers li, .talks li, .repos li, footer {
     grid-template-columns: 1fr;
+  }
+  .steps li::before,
+  .step-body {
+    grid-column: 1;
+    grid-row: auto;
   }
   .also { margin-left: 0; }
   .cites { margin-top: 0.2rem; }
