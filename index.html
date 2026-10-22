@@ -68,14 +68,14 @@
           <p class="item-meta"><span>2026</span><span>Research</span></p>
           <h3>TurboChIMES</h3>
           <p class="stake">A designer can try more chemistries before a long campaign.</p>
-          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. The plots below are that comparison on carbon monoxide. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
+          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
           <p class="links"><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">Preprint</a></p>
         </article>
         <article>
           <p class="item-meta"><span>2026</span><span>Research</span></p>
           <h3>Hierarchical transfer learning</h3>
           <p class="stake">Labs can reach a usable potential with less data and less compute.</p>
-          <p>A new chemistry usually means fitting an interatomic model all over again, and that fit is the slow, expensive part. With Rebecca Lindsey and colleagues at Lawrence Livermore, I am second author on a paper in npj Computational Materials that carries what a model has already learned into the next system. The figure below is the training set from that paper.</p>
+          <p>A new chemistry usually means fitting an interatomic model all over again, and that fit is the slow, expensive part. With Rebecca Lindsey and colleagues at Lawrence Livermore, I am second author on a paper in npj Computational Materials that carries what a model has already learned into the next system.</p>
           <p class="links"><a href="https://doi.org/10.1038/s41524-025-01863-4">Paper</a></p>
         </article>
         <article>
@@ -86,19 +86,6 @@
           <p class="links"><a href="https://github.com/Awwal41/MaterialSim">Source</a></p>
         </article>
       </div>
-
-      <figure class="compare">
-        <div class="compare-grid">
-          <img src="assets/turbo-pareto.png" width="1092" height="720" alt="Scatter plot of force error against CPU time for carbon monoxide at 128 atoms. The multi-layer TurboChIMES point is faster and lower error than the single-layer baseline, MACE-MP-0, CHGNet, SevenNet-0, and ORB-v3.">
-          <img src="assets/turbo-scaling.png" width="1092" height="720" alt="CPU time per atom-step for carbon monoxide at 2400 K, from a small cell to 8192 atoms. The multi-layer TurboChIMES line stays the fastest. The single-layer baseline, MACE-MP-0, CHGNet, SevenNet-0, ORB-v3, and MatterSim are slower at every size.">
-        </div>
-        <figcaption>Carbon monoxide. Multi-layer is TurboChIMES, and single-layer is the one-model baseline. The other marks are foundation potentials. At 128 atoms the multi-layer model is the fast, low-error point. At 2400 K that speed holds out to 8,192 atoms.</figcaption>
-      </figure>
-
-      <figure class="paper-fig">
-        <img src="assets/fig-transfer.png" width="610" height="1169" alt="Training set for the carbon–nitrogen transfer-learning models: temperature and density of each case, and snapshots with nitrogen in blue and carbon in cyan.">
-        <figcaption>Hierarchical transfer learning. Training configurations for the carbon–nitrogen models, from the <a href="https://doi.org/10.1038/s41524-025-01863-4">npj Computational Materials paper</a>.</figcaption>
-      </figure>
 
       <div class="section-head section-follow" id="approach">
         <h2>How the work gets done</h2>
@@ -214,10 +201,6 @@
           <span>Research</span>
         </div>
         <div class="item-body">
-          <figure class="work-fig">
-            <img src="assets/fig-liquid.png" width="644" height="490" alt="Cross-plot of test flow rate against critical flow rate for a Bayesian neural network. Unloaded and loaded wells fall on opposite sides of the diagonal.">
-            <figcaption>From the <a href="https://doi.org/10.1007/s13202-022-01525-x">2022 liquid-loading paper</a>.</figcaption>
-          </figure>
           <details class="fold">
             <summary>
               <span class="fold-title">Droplet-film model for liquid loading</span>
@@ -240,10 +223,6 @@
           <span>Research</span>
         </div>
         <div class="item-body">
-          <figure class="work-fig">
-            <img src="assets/fig-sand.png" width="612" height="400" alt="Actual and predicted critical drawdown pressure across wells, from the random forest model.">
-            <figcaption>From the <a href="https://doi.org/10.11648/j.pse.20250902.13">sand-production paper</a>.</figcaption>
-          </figure>
           <details class="fold">
             <summary>
               <span class="fold-title">Sand production</span>
@@ -257,21 +236,6 @@
               </p>
             </div>
           </details>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="item-meta">
-          <span>2025</span>
-          <span>Research</span>
-        </div>
-        <div class="item-body">
-          <h3 class="fold-title">Biodiesel from waste ram fat</h3>
-          <p class="stake">Experiment and a model together find a higher yield from waste fat.</p>
-          <figure class="work-fig">
-            <img src="assets/fig-biodiesel.png" width="1383" height="769" alt="Neural network plot of biodiesel yield: measured and predicted yield, residuals, and an error histogram.">
-            <figcaption>From the <a href="https://journal.njtd.com.ng/index.php/njtd/article/view/3322">biodiesel paper</a>.</figcaption>
-          </figure>
         </div>
       </article>
 
@@ -343,10 +307,65 @@
     <section id="research" aria-labelledby="research-title">
       <div class="section-head">
         <h2 id="research-title">Research</h2>
-        <p><a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a> lists <span id="stat-citations">44</span> citations, an h-index of <span id="stat-h">4</span>, and an i10-index of <span id="stat-i10">1</span>. Faster interatomic models, wells, carbon storage, hydrates, and biodiesel.</p>
+        <p><a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a> lists <span id="stat-citations">44</span> citations, an h-index of <span id="stat-h">4</span>, and an i10-index of <span id="stat-i10">1</span>. One figure with each paper. The <a href="cv.html">CV</a> has the full list.</p>
       </div>
-      <ol class="papers" id="papers">
-        <li class="pending">Loading the publication list…</li>
+      <ol class="paper-gallery">
+        <li>
+          <img src="assets/turbo-pareto.png" width="1092" height="720" alt="Force error against CPU time for carbon monoxide at 128 atoms. The multi-layer TurboChIMES point is faster and lower error than the single-layer baseline and the foundation potentials.">
+          <div>
+            <p class="item-meta"><span>2026</span><span>ChemRxiv</span></p>
+            <h3><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">TurboChIMES</a></h3>
+            <p>Carbon monoxide at 128 atoms. Multi-layer is TurboChIMES. It is the fast, low-error point next to the one-model baseline and the foundation potentials.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/fig-transfer.png" width="741" height="428" alt="Training temperatures and densities for the carbon–nitrogen transfer-learning models. Points are marked by nitrogen fraction.">
+          <div>
+            <p class="item-meta"><span>2026</span><span>npj Computational Materials</span></p>
+            <h3><a href="https://doi.org/10.1038/s41524-025-01863-4">Hierarchical transfer learning</a></h3>
+            <p>Training temperatures and densities for the carbon–nitrogen models. What a model has already learned is carried into the next system.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/fig-carbon.svg" width="640" height="360" alt="Schematic of a five-spot pattern: carbon dioxide injected at the center well, oil produced at the four corners.">
+          <div>
+            <p class="item-meta"><span>2025</span><span>ChemEngineering</span></p>
+            <h3><a href="https://doi.org/10.3390/chemengineering10010001">Oil recovery and carbon storage</a></h3>
+            <p>Schematic of the field decision. Carbon dioxide goes in at the center well, and oil is produced at the corners. The journal file was not available to crop.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/fig-sand.png" width="612" height="400" alt="Actual and predicted critical drawdown pressure across wells, from the random forest model.">
+          <div>
+            <p class="item-meta"><span>2025</span><span>Petroleum Science and Engineering</span></p>
+            <h3><a href="https://doi.org/10.11648/j.pse.20250902.13">Sand production</a></h3>
+            <p>Actual and predicted critical drawdown from the random forest model.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/fig-biodiesel.png" width="1383" height="769" alt="Neural network plot of biodiesel yield: measured and predicted yield, residuals, and an error histogram.">
+          <div>
+            <p class="item-meta"><span>2025</span><span>Nigerian Journal of Technological Development</span></p>
+            <h3><a href="https://journal.njtd.com.ng/index.php/njtd/article/view/3322">Biodiesel from waste ram fat</a></h3>
+            <p>Measured and predicted yield, the residuals, and the error histogram.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/fig-hydrate.png" width="1280" height="720" alt="Schematic of a pipeline. Temperature falls from the inlet toward the outlet and crosses a hydrate line.">
+          <div>
+            <p class="item-meta"><span>2023</span><span>Petroleum and Coal</span></p>
+            <h3>Hydrate formation temperature</h3>
+            <p>Schematic of the pipeline problem. Temperature falls from the inlet, and hydrate can form once it crosses the line. No open PDF was available to crop.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/fig-liquid.png" width="644" height="490" alt="Cross-plot of test flow rate against critical flow rate. Unloaded and loaded wells fall on opposite sides of the diagonal.">
+          <div>
+            <p class="item-meta"><span>2022</span><span>Journal of Petroleum Exploration and Production Technology</span></p>
+            <h3><a href="https://doi.org/10.1007/s13202-022-01525-x">Liquid loading</a></h3>
+            <p>Test flow rate against critical flow rate. Unloaded and loaded wells fall on opposite sides of the diagonal.</p>
+          </div>
+        </li>
       </ol>
 
       <h3 class="subhead">Talks</h3>
