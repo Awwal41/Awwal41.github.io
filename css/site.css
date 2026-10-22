@@ -1,4 +1,5 @@
-:root {
+:root,
+:root[data-theme="light"] {
   --paper: #efeae2;
   --paper-deep: #e6dfd4;
   --ink: #1c1915;
@@ -10,7 +11,7 @@
   --measure: 40rem;
   --page: 72rem;
   --shadow: 0 18px 40px rgba(28, 25, 21, 0.12);
-  color-scheme: light;
+  color-scheme: only light;
 }
 
 :root[data-theme="dark"] {
@@ -28,7 +29,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--paper); }
 
 body {
   margin: 0;
@@ -100,27 +101,30 @@ a:hover { color: var(--umber); }
 .top nav a:hover { color: var(--ink); }
 
 .theme {
-  appearance: none;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
   margin: 0;
-  padding: 0.12rem 0.55rem;
-  border: 1px solid var(--line);
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
   background: transparent;
   color: var(--muted);
-  font: inherit;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
-.theme:hover { color: var(--ink); border-color: var(--ink); }
+.theme:hover { color: var(--ink); background: var(--paper-deep); }
 
-.theme-dark { display: none; }
+.theme svg { width: 1.05rem; height: 1.05rem; display: block; }
 
-:root[data-theme="dark"] .theme-light { display: none; }
+.theme .icon-sun { display: none; }
 
-:root[data-theme="dark"] .theme-dark { display: inline; }
+:root[data-theme="dark"] .theme .icon-moon { display: none; }
+
+:root[data-theme="dark"] .theme .icon-sun { display: block; }
 
 main {
   width: min(var(--page), calc(100% - 12vw));
