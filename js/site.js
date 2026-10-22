@@ -1,4 +1,31 @@
 (function () {
+  var themeButton = document.getElementById("theme");
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+
+  function syncTheme(theme) {
+    var dark = theme === "dark";
+    document.documentElement.setAttribute("data-theme", theme);
+    if (themeButton) {
+      themeButton.setAttribute("aria-pressed", dark ? "true" : "false");
+      themeButton.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    }
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? "#161310" : "#efeae2");
+    if (typeof renderContributions === "function" && window.__calendar) renderContributions(window.__calendar);
+  }
+
+  if (themeButton) {
+    syncTheme(currentTheme());
+    themeButton.addEventListener("click", function () {
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      try { localStorage.setItem("theme", next); } catch (error) {}
+      syncTheme(next);
+    });
+  }
+
   var stats = {
     contrib: document.getElementById("stat-contrib"),
     citations: document.getElementById("stat-citations"),
@@ -147,7 +174,9 @@
         var count = Number(day.count || 0);
         var cell = document.createElement("span");
         cell.className = "contrib-day";
-        cell.style.backgroundColor = day.color || "#ebedf0";
+        var color = day.color || "#ebedf0";
+        if (currentTheme() === "dark" && color.toLowerCase() === "#ebedf0") color = "#3a342e";
+        cell.style.backgroundColor = color;
         var dayNoun = count === 1 ? "contribution" : "contributions";
         cell.title = (day.date || "Day") + ": " + count + " " + dayNoun;
         column.appendChild(cell);
@@ -181,6 +210,7 @@
       if (scholar.i10Index != null) setStat(stats.i10, scholar.i10Index);
       renderWorks(data.works);
       renderRepos(data.repos);
+      window.__calendar = data.contributions;
       renderContributions(data.contributions);
       var colophon = document.getElementById("colophon");
       if (data.generatedAt && colophon) {
