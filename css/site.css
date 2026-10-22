@@ -479,12 +479,29 @@ h1 {
   border: 1px solid var(--line);
 }
 
-.compare figcaption {
+.compare figcaption,
+.paper-fig figcaption,
+.work-fig figcaption {
   max-width: 46rem;
   margin-top: 0.75rem;
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+.paper-fig { margin: 1.75rem 0 0; }
+
+.paper-fig img,
+.work-fig img {
+  display: block;
+  width: min(100%, 34rem);
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.paper-fig img { width: min(100%, 24rem); }
+
+.work-fig { margin: 0 0 0.9rem; }
 
 .section-follow { margin-top: 3.2rem; }
 
