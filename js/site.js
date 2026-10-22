@@ -19,6 +19,7 @@
 
   function renderWorks(works) {
     var list = document.getElementById("papers");
+    if (!list) return;
     list.replaceChildren();
     if (!works || !works.length) {
       list.appendChild(el("li", "pending", "Publication list is unavailable right now."));
@@ -49,6 +50,7 @@
 
   function renderRepos(repos) {
     var list = document.getElementById("repos");
+    if (!list) return;
     list.replaceChildren();
     if (!repos || !repos.length) {
       list.appendChild(el("li", "pending", "Repository list is unavailable right now."));
@@ -102,12 +104,12 @@
     requestAnimationFrame(frame);
   }
 
-  setStat(stats.contrib, stats.contrib.textContent);
-  setStat(stats.citations, stats.citations.textContent);
-  setStat(stats.h, stats.h.textContent);
-  setStat(stats.i10, stats.i10.textContent);
+  if (stats.contrib) setStat(stats.contrib, stats.contrib.textContent);
+  if (stats.citations) setStat(stats.citations, stats.citations.textContent);
+  if (stats.h) setStat(stats.h, stats.h.textContent);
+  if (stats.i10) setStat(stats.i10, stats.i10.textContent);
 
-  var folds = document.querySelectorAll("#work details.fold");
+  var folds = document.querySelectorAll("details.fold");
   folds.forEach(function (fold) {
     fold.addEventListener("toggle", function () {
       if (!fold.open) return;
@@ -155,7 +157,7 @@
   }
 
   if (!reduceMotion && "IntersectionObserver" in window) {
-    var observed = document.querySelectorAll(".band, .about-photo, .section-head, .steps li, .item, .also");
+    var observed = document.querySelectorAll(".section-head, .featured article, .moves li, .item, .also");
     observed.forEach(function (node) { node.classList.add("await"); });
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

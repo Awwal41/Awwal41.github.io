@@ -367,9 +367,9 @@ h1, h2, h3 { font-family: "Newsreader", Georgia, serif; font-weight: 500; letter
 
 h1 {
   margin: 0;
-  max-width: 16ch;
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
-  line-height: 1.02;
+  max-width: 18ch;
+  font-size: clamp(2.15rem, 4.2vw, 3.4rem);
+  line-height: 1.08;
 }
 
 .lede,
@@ -383,7 +383,64 @@ h1 {
   color: var(--muted);
 }
 
-.lede { margin-top: 1.4rem; font-size: 1.35rem; color: var(--ink); }
+.lede { margin-top: 1.2rem; font-size: 1.35rem; color: var(--ink); }
+
+.role {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  margin: 1.15rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+.featured article {
+  min-width: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ink);
+}
+
+.featured h3 {
+  margin: 0.7rem 0 0;
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+}
+
+.featured .stake { margin-top: 0.45rem; }
+
+.featured p { margin: 0.7rem 0 0; }
+
+.section-follow { margin-top: 3.2rem; }
+
+.moves {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.35rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.moves h3 { margin: 0 0 0.3rem; font-size: 1.3rem; }
+
+.moves p { margin: 0; max-width: 38rem; color: var(--muted); }
+
+.note {
+  max-width: 46rem;
+  margin: 0 0 0.4rem;
+  color: var(--muted);
+}
 
 .stats {
   display: grid;
@@ -430,7 +487,7 @@ section { padding-top: 3.2rem; }
 
 .section-head {
   display: grid;
-  grid-template-columns: minmax(0, 16rem) minmax(0, 36rem);
+  grid-template-columns: minmax(0, 20rem) minmax(0, 36rem);
   gap: 1.5rem 3rem;
   align-items: end;
   margin-bottom: 1.5rem;
@@ -574,13 +631,70 @@ footer ul {
   outline-offset: 3px;
 }
 
+.page-cv h1 { max-width: none; font-size: clamp(2.4rem, 5vw, 3.4rem); }
+
+.cv { width: min(48rem, 100%); }
+
+.cv-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 8.5rem;
+  gap: 1.5rem 2rem;
+  align-items: start;
+  padding-top: 3.2rem;
+}
+
+.cv-head img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.cv-head p { margin: 0.7rem 0 0; }
+
+.cv section { padding-top: 2rem; }
+
+.cv h2 {
+  margin: 0 0 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--ink);
+  font-size: 1.6rem;
+}
+
+.cv-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-list li {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 0.4rem 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-title {
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.cv-list p { margin: 0.2rem 0 0; }
+
 @media (max-width: 800px) {
   .top { padding: 0.9rem 5vw; }
   main, footer { width: min(100% - 10vw, var(--page)); }
   .hero { padding-top: 2.4rem; grid-template-columns: 1fr; }
+  .hero h1 { max-width: none; }
   .portrait { grid-column: 1; grid-row: auto; max-width: 16rem; }
   .about { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .featured, .moves { grid-template-columns: 1fr; }
+  .cv-head, .cv-list li { grid-template-columns: 1fr; }
+  .cv-head img { max-width: 10rem; }
   .steps li, .section-head, .item, .papers li, .talks li, .repos li, footer {
     grid-template-columns: 1fr;
   }
@@ -604,4 +718,11 @@ footer ul {
     animation: none;
   }
   .await { opacity: 1; transform: none; }
+}
+
+@media print {
+  .top, .skip, .contrib { display: none; }
+  body { background: white; color: black; }
+  a { color: inherit; text-decoration: none; }
+  .portrait img, .cv-head img { box-shadow: none; }
 }
