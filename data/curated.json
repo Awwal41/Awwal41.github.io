@@ -1,0 +1,63 @@
+{
+  "githubUser": "Awwal41",
+  "orcid": "0009-0006-3979-2078",
+  "scholar": {
+    "profile": "https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en",
+    "citations": 44,
+    "hIndex": 4,
+    "i10Index": 1,
+    "fetchedAt": "2026-10-21"
+  },
+  "hideRepos": [
+    "Awwal41",
+    "test",
+    "udlbook",
+    "machine-learning",
+    "Hamoye",
+    "Note_App",
+    "BCG",
+    "MegaParse",
+    "awesome-phone-call-agents",
+    "call-e-integrations"
+  ],
+  "repoBlurbs": {
+    "MaterialSim": "An agent that runs molecular-dynamics workflows from plain language, then computes properties and walks through the result.",
+    "Droplet-Film-Theory-Development": "Physics-informed droplet-film model for liquid loading in gas wells, with public documentation.",
+    "RockTyping": "Machine-learning notebooks for predicting rock types in a reservoir.",
+    "BayesianHypTune": "Notebooks for Bayesian hyperparameter search.",
+    "pi-by-MC": "A short Monte Carlo estimate of pi.",
+    "wedin": "A wedding website: story, registry, and a layout made for a phone.",
+    "webApp": "An early TypeScript web application.",
+    "Sand-Production-Rate-Prediction-Using-Machine-Learning-Algorithm": "Study notes toward a machine-learning model of sand production rate.",
+    "7Minute_WorkOut_App": "An Android interval-training app.",
+    "WaliDrawingApp": "An Android drawing app.",
+    "HappyPlacesApp": "An Android app for saving places.",
+    "AwwaliDOBCalc": "An Android age calculator.",
+    "WaliQuizApp": "An Android quiz app.",
+    "WeatherApp2": "An Android weather client.",
+    "WaliProjectManager": "An Android project board.",
+    "al_driver-LLfork": "Active-learning driver used to develop ChIMES models.",
+    "chimes_lsq-LLfork": "Least-squares tools for building ChIMES parameter sets.",
+    "chimes_calculator-LLfork": "Interfaces between ChIMES and outside simulation codes."
+  },
+  "extraWorks": [
+    {
+      "title": "Prediction of Gas Hydrate Formation Temperature in Pipelines using Artificial Neural Network (ANN) and Firefly Algorithm (FA)",
+      "year": 2023,
+      "venue": "Petroleum and Coal",
+      "type": "article",
+      "citedBy": 3,
+      "url": "",
+      "authors": "E. B. Mepaiyeda, I. A. Oluwayomi, A. O. Oladipupo, and coauthors"
+    },
+    {
+      "title": "Experimental and Computational Modelling for Optimised Biodiesel Production from Waste Ram Fat Using a Kaolinite-Clay and Eggshell-Derived Catalyst",
+      "year": 2025,
+      "venue": "Nigerian Journal of Technological Development",
+      "type": "article",
+      "citedBy": 1,
+      "url": "",
+      "authors": "E. O. Ajala, A. B. Ehinmowo, A. D. Oladipupo, and coauthors"
+    }
+  ]
+}

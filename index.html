@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awwal Oladipupo — Chemical engineering, models, and software</title>
+  <meta name="description" content="Awwal Oladipupo is a chemical engineering PhD candidate at the University of Michigan. He builds machine-learned interatomic models and the software around them.">
+  <meta name="author" content="Awwal Oladipupo">
+  <meta name="theme-color" content="#efeae2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="top">
+    <a class="mark" href="#top">Awwal Oladipupo</a>
+    <nav aria-label="Page">
+      <a href="#work">Work</a>
+      <a href="#research">Research</a>
+      <a href="#code">Code</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <p class="kicker">Chemical engineering · University of Michigan</p>
+      <h1>Models for matter, and the software that makes them usable.</h1>
+      <p class="lede">I am a PhD candidate in the Lindsey Lab and a fellow of the Michigan Institute for Computational Discovery and Engineering. I build machine-learned interatomic models, and the tools around them, so atomistic simulation can cover more chemistry at a speed a researcher will actually use.</p>
+      <dl class="stats" id="stats">
+        <div>
+          <dt>Google Scholar citations</dt>
+          <dd id="stat-citations">44</dd>
+        </div>
+        <div>
+          <dt>h-index</dt>
+          <dd id="stat-h">4</dd>
+        </div>
+        <div>
+          <dt>i10-index</dt>
+          <dd id="stat-i10">1</dd>
+        </div>
+      </dl>
+      <ul class="identity">
+        <li>Advisor, Rebecca Lindsey</li>
+        <li>MICDE Fellow, 2026–2027</li>
+        <li>People’s Choice, Three Minute Thesis, 2025</li>
+        <li>BSc, Chemical and Petroleum Engineering, University of Lagos</li>
+      </ul>
+    </section>
+
+    <section class="prose" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>Before Michigan I trained as a chemical and petroleum engineer at the University of Lagos. That work is still in print: liquid loading in gas wells, sand production, gas-hydrate temperature, biodiesel catalysis, and later studies of enhanced oil recovery and carbon storage.</p>
+      <p>The same habit of building shows up in software. Public projects include simulation agents and research codes. Private ones include a mentorship product, a document assistant, and tools for running models on a laptop, a cluster, or a phone. Those are described here at the level of the contribution. The internals stay in the repository they belong to.</p>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <h2 id="work-title">Selected work</h2>
+        <p>Research first, then the products and tools. Private items are labeled, and the repository stays closed.</p>
+      </div>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2026</span>
+          <span>Research</span>
+        </div>
+        <div class="item-body">
+          <h3>TurboChIMES</h3>
+          <p>First-author preprint on multi-layered machine-learned interatomic models. The models are built so atomistic simulations stay trustworthy and become fast enough to use in materials design. This is the work I presented, in three minutes, when the audience voted me People’s Choice at Michigan’s Three Minute Thesis competition.</p>
+          <p class="links"><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">Preprint</a></p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2026</span>
+          <span>Research</span>
+        </div>
+        <div class="item-body">
+          <h3>Hierarchical transfer learning</h3>
+          <p>Second author, with Rebecca Lindsey and colleagues at Lawrence Livermore National Laboratory, in npj Computational Materials. The paper is a strategy for carrying an interatomic model into a new chemistry, so the next system starts from what the model already knows.</p>
+          <p class="links"><a href="https://doi.org/10.1038/s41524-025-01863-4">Paper</a></p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2026</span>
+          <span>Research</span>
+        </div>
+        <div class="item-body">
+          <h3>Alchemical compression</h3>
+          <p>Current work with T. Sundberg and Rebecca Lindsey on shrinking the combinatorial explosion of elements inside a machine-learned interatomic potential. It is on the public record as a 2026 AIChE contribution.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2025</span>
+          <span>Software</span>
+        </div>
+        <div class="item-body">
+          <h3>MaterialSim</h3>
+          <p>A public agent for computational materials work. You describe a molecular-dynamics run in a sentence. It sets the simulation up, computes properties such as structure and transport, and talks through what came back. The core engine runs locally.</p>
+          <p class="links"><a href="https://github.com/Awwal41/MaterialSim">Source</a></p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2026</span>
+          <span>Product</span>
+          <span class="private">Private</span>
+        </div>
+        <div class="item-body">
+          <h3>GuiDrs</h3>
+          <p>A mentorship product for applicants, graduate students, and mentors. The mobile app covers matching, messages, video conversations, applications, funding, and a mentor’s requests and availability. I built the app and the service behind it.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2026</span>
+          <span>Software</span>
+          <span class="private">Private</span>
+        </div>
+        <div class="item-body">
+          <h3>EZRA</h3>
+          <p>Easy Zero-setup Routing Assistant, a researcher-facing toolkit for open language models. It downloads a model, runs a personal agent on the machine in front of you, turns documents into text a model can read, and stages the same job on a SLURM cluster. I built it for materials and chemistry work.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2025</span>
+          <span>Research</span>
+        </div>
+        <div class="item-body">
+          <h3>Droplet-film model for liquid loading</h3>
+          <p>A physics-informed machine-learning model of the droplet film that forms when a gas well can no longer lift its liquid. The documentation is public. It continues the liquid-loading problem I first published on with Kingsley Abhulimen.</p>
+          <p class="links">
+            <a href="https://awwal41.github.io/Droplet-Film-Theory-Development/">Documentation</a>
+            <a href="https://doi.org/10.1007/s13202-022-01525-x">2022 paper</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2025</span>
+          <span>Research</span>
+        </div>
+        <div class="item-body">
+          <h3>Sand production</h3>
+          <p>First-author study of how to predict and manage sand production in oil and gas wells from field data, published in Petroleum Science and Engineering. Public notebooks on reservoir rock typing are the earlier layer of the same problem.</p>
+          <p class="links">
+            <a href="https://doi.org/10.11648/j.pse.20250902.13">Paper</a>
+            <a href="https://github.com/Awwal41/RockTyping">Rock typing</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2025</span>
+          <span>Product</span>
+          <span class="private">Private</span>
+        </div>
+        <div class="item-body">
+          <h3>Edna</h3>
+          <p>A document assistant with a desktop app and a web client on top of a retrieval system. You choose the folders, ask a question, and get an answer that points back at the passage. It can live on one computer or run as a service you deploy yourself.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="item-meta">
+          <span>2023–</span>
+          <span>Software</span>
+        </div>
+        <div class="item-body">
+          <h3>ChIMES toolchain</h3>
+          <p>Day-to-day research engineering in the public ChIMES stack used for machine-learned interatomic models: an active-learning driver, least-squares fitting, and calculators that connect the model to outside simulation codes.</p>
+          <p class="links">
+            <a href="https://github.com/Awwal41/al_driver-LLfork">Active learning</a>
+            <a href="https://github.com/Awwal41/chimes_lsq-LLfork">Fitting</a>
+            <a href="https://github.com/Awwal41/chimes_calculator-LLfork">Calculator</a>
+          </p>
+        </div>
+      </article>
+
+      <div class="also">
+        <h3>Also</h3>
+        <ul>
+          <li><strong>On-device models.</strong> Private. I added local language models to an assistant so a reply can be produced on the device.</li>
+          <li><strong>Calibrated neural nets.</strong> Private. I prototyped Bayesian neural networks for problems where the uncertainty is part of the answer.</li>
+          <li><strong>Review before entry.</strong> Private. I designed a stack that checks untrusted text before it is allowed near a protected environment.</li>
+          <li><strong>Architecture notes, as a site.</strong> Private. I built a place for a team to read architecture diagrams that live next to the code.</li>
+          <li><strong>A wedding website.</strong> Story, registry, and a phone-first layout. <a href="https://github.com/Awwal41/wedin">Source</a></li>
+          <li><strong>Early Android apps.</strong> A quiz, weather, interval training, drawing, places, and a project board, from learning how a finished mobile app fits together. They are listed under public code.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="research" aria-labelledby="research-title">
+      <div class="section-head">
+        <h2 id="research-title">Research</h2>
+        <p>Papers are collected from <a href="https://orcid.org/0009-0006-3979-2078">ORCID</a> through OpenAlex, plus two records that appear on <a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a> and are not on that ORCID feed yet. Counts on each paper follow OpenAlex when the record is indexed there. The totals at the top of the page are the Google Scholar profile.</p>
+      </div>
+      <ol class="papers" id="papers">
+        <li class="pending">Loading the publication list…</li>
+      </ol>
+
+      <h3 class="subhead">Talks</h3>
+      <ol class="talks">
+        <li>
+          <span class="year">2026</span>
+          <div>
+            <p class="talk-title">Exploring Alchemical Compression Pathways for Reducing Elemental Combinatorial Explosion in Machine Learned Interatomic Potentials</p>
+            <p class="talk-meta">AIChE Annual Meeting · with T. Sundberg and Rebecca Lindsey</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <p class="talk-title">Enhancing Efficiency of Machine-Learned Interatomic Models through a Multilayered Strategy</p>
+            <p class="talk-meta">AIChE Annual Meeting · with Rebecca Lindsey</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <p class="talk-title">Multilayered Machine-Learned Interatomic Model for Fast Design, and Discovery of Materials</p>
+            <p class="talk-meta">Three Minute Thesis, University of Michigan · People’s Choice · <a href="https://che.engin.umich.edu/2025/03/13/awwal-oladipupo-wins-peoples-choice-award-at-three-minute-thesis-competition/">Department note</a></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="code" aria-labelledby="code-title">
+      <div class="section-head">
+        <h2 id="code-title">Public code</h2>
+        <p>Original public repositories on <a href="https://github.com/Awwal41">GitHub</a>. Course forks and other people’s projects stay on GitHub. Private repositories stay in this page’s prose.</p>
+      </div>
+      <ul class="repos" id="repos">
+        <li class="pending">Loading repositories…</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div>
+      <p class="footer-name">Awwal Oladipupo</p>
+      <p>Ann Arbor, Michigan</p>
+    </div>
+    <ul>
+      <li><a href="mailto:awwalola@umich.edu">awwalola@umich.edu</a></li>
+      <li><a href="https://github.com/Awwal41">GitHub</a></li>
+      <li><a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a></li>
+      <li><a href="https://orcid.org/0009-0006-3979-2078">ORCID</a></li>
+      <li><a href="https://che.engin.umich.edu/people/oladipupo-awwal/">Michigan Chemical Engineering</a></li>
+      <li><a href="https://micde.umich.edu/member/awwal-oladipupo/">MICDE</a></li>
+    </ul>
+    <p class="colophon" id="colophon">Publications and public repositories refresh every Monday.</p>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

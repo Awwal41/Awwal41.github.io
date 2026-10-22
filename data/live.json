@@ -1,0 +1,239 @@
+{
+  "generatedAt": "2026-10-22T00:58:35Z",
+  "scholar": {
+    "profile": "https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en",
+    "citations": 44,
+    "hIndex": 4,
+    "i10Index": 1,
+    "fetchedAt": "2026-10-22"
+  },
+  "works": [
+    {
+      "title": "Hierarchical transfer learning: an agile and equitable strategy for machine-learning interatomic models",
+      "year": 2026,
+      "venue": "npj Computational Materials",
+      "type": "article",
+      "typeLabel": "Journal",
+      "citedBy": 4,
+      "url": "https://doi.org/10.1038/s41524-025-01863-4",
+      "authors": "Rebecca Lindsey, Awwal D. Oladipupo, Sorin Bastea, and 3 others"
+    },
+    {
+      "title": "From Knowledge to Action: Outcomes of the 2025 Large Language Model (LLM) Hackathon for Applications in Materials Science and Chemistry",
+      "year": 2026,
+      "venue": "arXiv (Cornell University)",
+      "type": "preprint",
+      "typeLabel": "Preprint",
+      "citedBy": 1,
+      "url": "https://doi.org/10.48550/arxiv.2605.03205",
+      "authors": "Aritra Roy, Kevin Shen, Andrew MacBride, and 97 others"
+    },
+    {
+      "title": "2025 LLM Hackathon for Application in Chemistry and Materials Science Submissions Related to Knowledge Infrastructure",
+      "year": 2026,
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "type": "article",
+      "typeLabel": "Deposit",
+      "citedBy": 0,
+      "url": "https://doi.org/10.5281/zenodo.20799822",
+      "authors": "Aritra Roy, Kevin Shen, Andrew R. MacBride, and 93 others"
+    },
+    {
+      "title": "TurboChIMES: Multi-Layered Machine-Learned Interatomic Models for Enhanced Simulation Efficiency",
+      "year": 2026,
+      "venue": "ChemRxiv",
+      "type": "preprint",
+      "typeLabel": "Preprint",
+      "citedBy": 0,
+      "url": "https://doi.org/10.26434/chemrxiv.15007194/v1",
+      "authors": "Awwal D. Oladipupo, Benjamin R. Laubach, Sayed Ahmad Almohri, and 1 others"
+    },
+    {
+      "title": "Integration of Machine Learning and Feature Analysis for the Optimization of Enhanced Oil Recovery and Carbon Sequestration in Oil Reservoirs",
+      "year": 2025,
+      "venue": "ChemEngineering",
+      "type": "article",
+      "typeLabel": "Journal",
+      "citedBy": 2,
+      "url": "https://doi.org/10.3390/chemengineering10010001",
+      "authors": "Bukola Mepaiyeda, Michal Ezeh, O. A. Olafadehan, and 3 others"
+    },
+    {
+      "title": "Leveraging Data-driven Approach for Sand Production Prediction and Management in Oil and Gas Wells",
+      "year": 2025,
+      "venue": "Petroleum Science and Engineering",
+      "type": "article",
+      "typeLabel": "Journal",
+      "citedBy": 1,
+      "url": "https://doi.org/10.11648/j.pse.20250902.13",
+      "authors": "Awwal D. Oladipupo, Isaac Johnson, Opeyemi Adebayo, and 2 others"
+    },
+    {
+      "title": "Experimental and Computational Modelling for Optimised Biodiesel Production from Waste Ram Fat Using a Kaolinite-Clay and Eggshell-Derived Catalyst",
+      "year": 2025,
+      "venue": "Nigerian Journal of Technological Development",
+      "type": "article",
+      "typeLabel": "Journal",
+      "citedBy": 1,
+      "url": "",
+      "authors": "E. O. Ajala, A. B. Ehinmowo, A. D. Oladipupo, and coauthors"
+    },
+    {
+      "title": "Prediction of Gas Hydrate Formation Temperature in Pipelines using Artificial Neural Network (ANN) and Firefly Algorithm (FA)",
+      "year": 2023,
+      "venue": "Petroleum and Coal",
+      "type": "article",
+      "typeLabel": "Journal",
+      "citedBy": 3,
+      "url": "",
+      "authors": "E. B. Mepaiyeda, I. A. Oluwayomi, A. O. Oladipupo, and coauthors"
+    },
+    {
+      "title": "Modelling of liquid loading in gas wells using a software-based approach",
+      "year": 2022,
+      "venue": "Journal of Petroleum Exploration and Production Technology",
+      "type": "article",
+      "typeLabel": "Journal",
+      "citedBy": 16,
+      "url": "https://doi.org/10.1007/s13202-022-01525-x",
+      "authors": "Kingsley Eromosele Abhulimen and Awwal D. Oladipupo"
+    }
+  ],
+  "repos": [
+    {
+      "name": "RockTyping",
+      "description": "Machine-learning notebooks for predicting rock types in a reservoir.",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/Awwal41/RockTyping",
+      "stars": 4,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "MaterialSim",
+      "description": "An agent that runs molecular-dynamics workflows from plain language, then computes properties and walks through the result.",
+      "language": "Python",
+      "url": "https://github.com/Awwal41/MaterialSim",
+      "stars": 3,
+      "updated": "2026-07-08",
+      "homepage": ""
+    },
+    {
+      "name": "Droplet-Film-Theory-Development",
+      "description": "Physics-informed droplet-film model for liquid loading in gas wells, with public documentation.",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/Awwal41/Droplet-Film-Theory-Development",
+      "stars": 0,
+      "updated": "2026-04-10",
+      "homepage": "https://awwal41.github.io/Droplet-Film-Theory-Development/"
+    },
+    {
+      "name": "wedin",
+      "description": "A wedding website: story, registry, and a layout made for a phone.",
+      "language": "HTML",
+      "url": "https://github.com/Awwal41/wedin",
+      "stars": 0,
+      "updated": "2025-12-21",
+      "homepage": ""
+    },
+    {
+      "name": "pi-by-MC",
+      "description": "A short Monte Carlo estimate of pi.",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/Awwal41/pi-by-MC",
+      "stars": 0,
+      "updated": "2024-10-01",
+      "homepage": ""
+    },
+    {
+      "name": "BayesianHypTune",
+      "description": "Notebooks for Bayesian hyperparameter search.",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/Awwal41/BayesianHypTune",
+      "stars": 0,
+      "updated": "2024-08-29",
+      "homepage": ""
+    },
+    {
+      "name": "webApp",
+      "description": "An early TypeScript web application.",
+      "language": "TypeScript",
+      "url": "https://github.com/Awwal41/webApp",
+      "stars": 0,
+      "updated": "2023-02-03",
+      "homepage": ""
+    },
+    {
+      "name": "7Minute_WorkOut_App",
+      "description": "An Android interval-training app.",
+      "language": "Kotlin",
+      "url": "https://github.com/Awwal41/7Minute_WorkOut_App",
+      "stars": 0,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "WaliDrawingApp",
+      "description": "An Android drawing app.",
+      "language": "Kotlin",
+      "url": "https://github.com/Awwal41/WaliDrawingApp",
+      "stars": 0,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "HappyPlacesApp",
+      "description": "An Android app for saving places.",
+      "language": "Kotlin",
+      "url": "https://github.com/Awwal41/HappyPlacesApp",
+      "stars": 0,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "AwwaliDOBCalc",
+      "description": "An Android age calculator.",
+      "language": "Kotlin",
+      "url": "https://github.com/Awwal41/AwwaliDOBCalc",
+      "stars": 0,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "WaliQuizApp",
+      "description": "An Android quiz app.",
+      "language": "Kotlin",
+      "url": "https://github.com/Awwal41/WaliQuizApp",
+      "stars": 0,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "WeatherApp2",
+      "description": "An Android weather client.",
+      "language": "Kotlin",
+      "url": "https://github.com/Awwal41/WeatherApp2",
+      "stars": 0,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "WaliProjectManager",
+      "description": "An Android project board.",
+      "language": "Kotlin",
+      "url": "https://github.com/Awwal41/WaliProjectManager",
+      "stars": 0,
+      "updated": "2022-12-28",
+      "homepage": ""
+    },
+    {
+      "name": "Sand-Production-Rate-Prediction-Using-Machine-Learning-Algorithm",
+      "description": "Study notes toward a machine-learning model of sand production rate.",
+      "language": "",
+      "url": "https://github.com/Awwal41/Sand-Production-Rate-Prediction-Using-Machine-Learning-Algorithm",
+      "stars": 0,
+      "updated": "2022-10-15",
+      "homepage": ""
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+name: Refresh publications and public code
+
+on:
+  schedule:
+    # Every Monday at 13:17 UTC. GitHub may delay the run by a few minutes.
+    - cron: "17 13 * * 1"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/curated.json"
+      - "scripts/refresh.py"
+      - ".github/workflows/refresh.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-site
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull OpenAlex, Google Scholar metrics, and public repositories
+        run: python scripts/refresh.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit the refreshed lists
+        run: |
+          git add data/live.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh publications and public repositories"
+          git push
