@@ -33,7 +33,7 @@
         <img src="assets/portrait.jpg" alt="Awwal Oladipupo outdoors on campus, in a brown jacket over a blue plaid shirt." width="460" height="460">
         <figcaption>Ann Arbor</figcaption>
       </figure>
-      <p class="lede">I am a PhD candidate in the Lindsey Lab and a fellow of the Michigan Institute for Computational Discovery and Engineering. I build machine-learned interatomic models, and the tools around them, so atomistic simulation can cover more chemistry at a speed a researcher will actually use.</p>
+      <p class="lede">Atomistic simulation is believable and still too slow to try the materials a designer actually wants. I am a PhD candidate in the Lindsey Lab and a MICDE fellow, and I build machine-learned interatomic models, plus the software around them, so a researcher can cover more chemistry and still trust the physics.</p>
       <dl class="stats" id="stats">
         <div>
           <dt>Google Scholar citations</dt>
@@ -58,14 +58,14 @@
 
     <figure class="band">
       <img src="assets/lattice.jpg" alt="A copper and charcoal model of connected atoms, resting on warm paper." width="1600" height="900">
-      <figcaption>The work sits between a model of matter and a tool someone can run.</figcaption>
+        <figcaption>A model earns its keep when someone can run it.</figcaption>
     </figure>
 
     <section class="about" aria-labelledby="about-title">
       <div class="prose">
         <h2 id="about-title">About</h2>
-        <p>Before Michigan I trained as a chemical and petroleum engineer at the University of Lagos. That work is still in print: liquid loading in gas wells, sand production, gas-hydrate temperature, biodiesel catalysis, and later studies of enhanced oil recovery and carbon storage.</p>
-        <p>The same habit of building shows up in software. Public projects include simulation agents and research codes. Private ones include a document assistant and tools for running models on a laptop, a cluster, or a phone. Those are described here at the level of the contribution. The internals stay in the repository they belong to.</p>
+        <p>Wells lose production when liquid loads the tubing or sand comes up with the flow. From the University of Lagos through later collaborations, my papers use field data and models to see liquid loading, sand, and hydrate temperature early enough to act, and to weigh oil recovery together with carbon storage. A related study improves biodiesel yield from waste fat by pairing experiment with computation.</p>
+        <p>At Michigan the bottleneck moved from the well to the simulation: the physics is trustworthy, and the setup is slow. I build public agents and research codes, and private tools for documents and for running models on a laptop, a cluster, or a phone. Private work is described at the level of the contribution, and the repository stays closed.</p>
       </div>
       <figure class="about-photo">
         <img src="assets/desk.jpg" alt="A research desk with a brass molecular model, an open notebook, and a ceramic cup." width="1200" height="900" loading="lazy">
@@ -85,7 +85,7 @@
         </div>
         <div class="item-body">
           <h3>TurboChIMES</h3>
-          <p>First-author preprint on multi-layered machine-learned interatomic models. The models are built so atomistic simulations stay trustworthy and become fast enough to use in materials design. This is the work I presented, in three minutes, when the audience voted me People’s Choice at Michigan’s Three Minute Thesis competition.</p>
+          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. A designer can try more chemistries before a long campaign. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
           <p class="links"><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">Preprint</a></p>
         </div>
       </article>
@@ -97,7 +97,7 @@
         </div>
         <div class="item-body">
           <h3>Hierarchical transfer learning</h3>
-          <p>Second author, with Rebecca Lindsey and colleagues at Lawrence Livermore National Laboratory, in npj Computational Materials. The paper is a strategy for carrying an interatomic model into a new chemistry, so the next system starts from what the model already knows.</p>
+          <p>A new chemistry usually means fitting an interatomic model all over again, and that fit is the slow, expensive part. With Rebecca Lindsey and colleagues at Lawrence Livermore, I am second author on a paper in npj Computational Materials that carries what a model has already learned into the next system. Labs can reach a usable potential with less data and less compute.</p>
           <p class="links"><a href="https://doi.org/10.1038/s41524-025-01863-4">Paper</a></p>
         </div>
       </article>
@@ -109,7 +109,7 @@
         </div>
         <div class="item-body">
           <h3>Alchemical compression</h3>
-          <p>Current work with T. Sundberg and Rebecca Lindsey on shrinking the combinatorial explosion of elements inside a machine-learned interatomic potential. It is on the public record as a 2026 AIChE contribution.</p>
+          <p>Every added element multiplies the training burden of a machine-learned potential, so coverage stays narrow. With T. Sundberg and Rebecca Lindsey I am compressing that elemental space so one potential can span more of the periodic table. Materials design can then reach a wider set of elements. The direction is public as a 2026 AIChE contribution.</p>
         </div>
       </article>
 
@@ -120,7 +120,7 @@
         </div>
         <div class="item-body">
           <h3>MaterialSim</h3>
-          <p>A public agent for computational materials work. You describe a molecular-dynamics run in a sentence. It sets the simulation up, computes properties such as structure and transport, and talks through what came back. The core engine runs locally.</p>
+          <p>A molecular-dynamics study still begins as a specialist’s input deck. MaterialSim is a public agent that turns one sentence into the simulation, computes properties such as structure and transport, and explains what came back. The engine runs locally, so a researcher gets a real run and an interpretation in the same conversation.</p>
           <p class="links"><a href="https://github.com/Awwal41/MaterialSim">Source</a></p>
         </div>
       </article>
@@ -133,7 +133,7 @@
         </div>
         <div class="item-body">
           <h3>EZRA</h3>
-          <p>Easy Zero-setup Routing Assistant, a researcher-facing toolkit for open language models. It downloads a model, runs a personal agent on the machine in front of you, turns documents into text a model can read, and stages the same job on a SLURM cluster. I built it for materials and chemistry work.</p>
+          <p>Open language models are free, and getting one installed, pointed at your papers, and onto a cluster is still its own project. EZRA downloads a model, runs an agent on the machine in front of you, prepares documents for that model, and stages the same job on SLURM. A materials or chemistry researcher can work locally the same day and reuse the workflow on the cluster.</p>
         </div>
       </article>
 
@@ -144,7 +144,7 @@
         </div>
         <div class="item-body">
           <h3>Droplet-film model for liquid loading</h3>
-          <p>A physics-informed machine-learning model of the droplet film that forms when a gas well can no longer lift its liquid. The documentation is public. It continues the liquid-loading problem I first published on with Kingsley Abhulimen.</p>
+          <p>When gas in a well slows down, liquid falls back, pressure rises, and production can stop. I built a physics-informed model of the droplet film behind that failure, with public documentation, extending the liquid-loading study I published with Kingsley Abhulimen. The aim is to see the loading early enough to act before a shutdown.</p>
           <p class="links">
             <a href="https://awwal41.github.io/Droplet-Film-Theory-Development/">Documentation</a>
             <a href="https://doi.org/10.1007/s13202-022-01525-x">2022 paper</a>
@@ -159,7 +159,7 @@
         </div>
         <div class="item-body">
           <h3>Sand production</h3>
-          <p>First-author study of how to predict and manage sand production in oil and gas wells from field data, published in Petroleum Science and Engineering. Public notebooks on reservoir rock typing are the earlier layer of the same problem.</p>
+          <p>Sand produced with oil or gas wears out equipment and cuts a well’s output, and the warning often arrives after the damage. My first-author paper in Petroleum Science and Engineering uses field data to predict and manage that sand, on top of public notebooks for reservoir rock typing. Operators get a clearer view of which wells need attention.</p>
           <p class="links">
             <a href="https://doi.org/10.11648/j.pse.20250902.13">Paper</a>
             <a href="https://github.com/Awwal41/RockTyping">Rock typing</a>
@@ -175,7 +175,7 @@
         </div>
         <div class="item-body">
           <h3>Edna</h3>
-          <p>A document assistant with a desktop app and a web client on top of a retrieval system. You choose the folders, ask a question, and get an answer that points back at the passage. It can live on one computer or run as a service you deploy yourself.</p>
+          <p>A question about a long technical archive is only useful when the answer can be traced to a page. Edna is a private assistant with a desktop app and a web client: you choose the folders, ask, and the reply points at the passage it used. The archive stays searchable, and the source stays attached, on one computer or on a service you run.</p>
         </div>
       </article>
 
@@ -186,7 +186,7 @@
         </div>
         <div class="item-body">
           <h3>ChIMES toolchain</h3>
-          <p>Day-to-day research engineering in the public ChIMES stack used for machine-learned interatomic models: an active-learning driver, least-squares fitting, and calculators that connect the model to outside simulation codes.</p>
+          <p>A machine-learned interatomic model helps only after it can be fit, checked, and called from the simulator a lab already trusts. I work in the public ChIMES stack that does the active learning, the least-squares fit, and the handoff into outside codes. The model can leave the notebook and run inside an existing simulation.</p>
           <p class="links">
             <a href="https://github.com/Awwal41/al_driver-LLfork">Active learning</a>
             <a href="https://github.com/Awwal41/chimes_lsq-LLfork">Fitting</a>
@@ -198,12 +198,12 @@
       <div class="also">
         <h3>Also</h3>
         <ul>
-          <li><strong>On-device models.</strong> Private. I added local language models to an assistant so a reply can be produced on the device.</li>
-          <li><strong>Calibrated neural nets.</strong> Private. I prototyped Bayesian neural networks for problems where the uncertainty is part of the answer.</li>
-          <li><strong>Review before entry.</strong> Private. I designed a stack that checks untrusted text before it is allowed near a protected environment.</li>
-          <li><strong>Architecture notes, as a site.</strong> Private. I built a place for a team to read architecture diagrams that live next to the code.</li>
-          <li><strong>A wedding website.</strong> Story, registry, and a phone-first layout. <a href="https://github.com/Awwal41/wedin">Source</a></li>
-          <li><strong>Early Android apps.</strong> A quiz, weather, interval training, drawing, places, and a project board, from learning how a finished mobile app fits together. They are listed under public code.</li>
+          <li><strong>On-device models.</strong> Private. Some conversations should stay on the device. I added local language models to an assistant, so the reply is produced there and the session stays with the person.</li>
+          <li><strong>Calibrated neural nets.</strong> Private. A lone prediction hides how unsure the model is. I prototyped Bayesian neural networks so the uncertainty travels with the answer, which matters when the data are scarce.</li>
+          <li><strong>Review before entry.</strong> Private. Untrusted text can reach a system that should have stayed sealed. I designed a stack that reviews that text first, so the protected environment only receives what has been checked.</li>
+          <li><strong>Architecture notes, as a site.</strong> Private. Diagrams drift away from the code they describe. I built a site that renders them from the repository, so the team reads the picture that matches the current commit.</li>
+          <li><strong>A wedding website.</strong> Guests needed the story, the registry, and the day-of details on a phone. I built the site so that information is in their pocket. <a href="https://github.com/Awwal41/wedin">Source</a></li>
+          <li><strong>Early Android apps.</strong> I needed to learn how a finished mobile app fits together, so I shipped a quiz, weather, interval training, drawing, places, and a project board. They are listed under public code.</li>
         </ul>
       </div>
     </section>
@@ -211,7 +211,7 @@
     <section id="research" aria-labelledby="research-title">
       <div class="section-head">
         <h2 id="research-title">Research</h2>
-        <p>Papers are collected from <a href="https://orcid.org/0009-0006-3979-2078">ORCID</a> through OpenAlex, plus two records that appear on <a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a> and are not on that ORCID feed yet. Counts on each paper follow OpenAlex when the record is indexed there. The totals at the top of the page are the Google Scholar profile.</p>
+        <p>This is the printed form of the work above: faster interatomic models, wells that load with liquid or sand, recovery considered alongside carbon storage, hydrates, and biodiesel. The list is collected from <a href="https://orcid.org/0009-0006-3979-2078">ORCID</a> through OpenAlex, with two records added from <a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a>. Counts on each paper follow OpenAlex when the record is indexed there. The totals at the top of the page are the Google Scholar profile.</p>
       </div>
       <ol class="papers" id="papers">
         <li class="pending">Loading the publication list…</li>
