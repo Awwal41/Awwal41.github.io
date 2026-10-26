@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T01:40:08Z",
+  "generatedAt": "2026-10-26T19:22:37Z",
   "scholar": {
     "profile": "https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en",
     "citations": 44,
@@ -101,21 +101,21 @@
   ],
   "repos": [
     {
+      "name": "MaterialSim",
+      "description": "An agent that runs molecular-dynamics workflows from plain language, then computes properties and walks through the result.",
+      "language": "Python",
+      "url": "https://github.com/Awwal41/MaterialSim",
+      "stars": 4,
+      "updated": "2026-07-08",
+      "homepage": ""
+    },
+    {
       "name": "RockTyping",
       "description": "Machine-learning notebooks for predicting rock types in a reservoir.",
       "language": "Jupyter Notebook",
       "url": "https://github.com/Awwal41/RockTyping",
       "stars": 4,
       "updated": "2022-12-28",
-      "homepage": ""
-    },
-    {
-      "name": "MaterialSim",
-      "description": "An agent that runs molecular-dynamics workflows from plain language, then computes properties and walks through the result.",
-      "language": "Python",
-      "url": "https://github.com/Awwal41/MaterialSim",
-      "stars": 3,
-      "updated": "2026-07-08",
       "homepage": ""
     },
     {
@@ -237,7 +237,7 @@
     }
   ],
   "contributions": {
-    "total": 1628,
+    "total": 1672,
     "colors": [
       "#9be9a8",
       "#40c463",
@@ -245,43 +245,6 @@
       "#216e39"
     ],
     "weeks": [
-      [
-        {
-          "date": "2025-10-19",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-10-20",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-10-21",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-10-22",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-10-23",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-10-24",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-10-25",
-          "count": 0,
-          "color": "#ebedf0"
-        }
-      ],
       [
         {
           "date": "2025-10-26",
@@ -448,7 +411,7 @@
         },
         {
           "date": "2025-11-26",
-          "count": 6,
+          "count": 8,
           "color": "#9be9a8"
         },
         {
@@ -475,7 +438,7 @@
         },
         {
           "date": "2025-12-01",
-          "count": 2,
+          "count": 4,
           "color": "#9be9a8"
         },
         {
@@ -1050,24 +1013,24 @@
         },
         {
           "date": "2026-03-20",
-          "count": 10,
+          "count": 11,
           "color": "#9be9a8"
         },
         {
           "date": "2026-03-21",
-          "count": 15,
-          "color": "#9be9a8"
+          "count": 19,
+          "color": "#40c463"
         }
       ],
       [
         {
           "date": "2026-03-22",
-          "count": 7,
+          "count": 12,
           "color": "#9be9a8"
         },
         {
           "date": "2026-03-23",
-          "count": 10,
+          "count": 15,
           "color": "#9be9a8"
         },
         {
@@ -2187,13 +2150,35 @@
         },
         {
           "date": "2026-10-21",
-          "count": 6,
+          "count": 15,
           "color": "#9be9a8"
         },
         {
           "date": "2026-10-22",
-          "count": 1,
+          "count": 14,
           "color": "#9be9a8"
+        },
+        {
+          "date": "2026-10-23",
+          "count": 3,
+          "color": "#9be9a8"
+        },
+        {
+          "date": "2026-10-24",
+          "count": 0,
+          "color": "#ebedf0"
+        }
+      ],
+      [
+        {
+          "date": "2026-10-25",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-10-26",
+          "count": 0,
+          "color": "#ebedf0"
         }
       ]
     ]
