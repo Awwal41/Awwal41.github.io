@@ -222,4 +222,239 @@
       renderWorks([]);
       renderRepos([]);
     });
+
+  var sim = document.getElementById("sim");
+  if (sim) {
+    var simCtx = sim.getContext("2d");
+    var atoms = [];
+    var simWidth = 1;
+    var simHeight = 1;
+    var simPhase = 0;
+    var pointer = { x: -9999, y: -9999 };
+    var simLoop = false;
+
+    function simColor(name) {
+      return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || "#1c1915";
+    }
+
+    function resizeSim() {
+      var rect = sim.getBoundingClientRect();
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      simWidth = Math.max(1, rect.width);
+      simHeight = Math.max(1, rect.height);
+      sim.width = Math.round(simWidth * dpr);
+      sim.height = Math.round(simHeight * dpr);
+      simCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var count = Math.round(Math.min(150, Math.max(56, simWidth * simHeight / 2600)));
+      while (atoms.length < count) {
+        atoms.push({
+          x: Math.random() * simWidth,
+          y: Math.random() * simHeight,
+          vx: 0,
+          vy: 0,
+          species: atoms.length % 2
+        });
+      }
+      if (atoms.length > count) atoms.length = count;
+    }
+
+    function placeAtom(index, count, mode) {
+      var pad = 16;
+      var span = Math.min(simWidth, simHeight);
+      var cx = simWidth * 0.64;
+      var cy = simHeight * 0.5;
+      var wide = simHeight < simWidth * 0.55;
+      if (mode === 0 || mode === 4) {
+        var turn = index * 2.399;
+        var ring = 12 + (index % 7) * span * 0.055;
+        return { x: cx + Math.cos(turn) * ring, y: cy + Math.sin(turn) * ring * 0.9 };
+      }
+      if (mode === 1) {
+        var shell = index % 3;
+        var around = Math.floor(index / 3) / Math.max(1, Math.ceil(count / 3)) * Math.PI * 2;
+        var radius = span * (0.16 + shell * 0.13);
+        return { x: cx + Math.cos(around) * radius, y: cy + Math.sin(around) * radius };
+      }
+      if (mode === 2) {
+        var side = index % 2 === 0 ? -1 : 1;
+        if (index % 8 === 0) side *= -1;
+        var local = index * 2.15;
+        var blob = 10 + (index % 5) * 11;
+        var shift = wide ? simWidth * 0.22 : simWidth * 0.16;
+        return {
+          x: cx + side * shift + Math.cos(local) * blob,
+          y: cy + Math.sin(local) * blob * 0.85
+        };
+      }
+      var along = index / Math.max(1, count - 1);
+      var helixRadius = Math.min(wide ? simHeight * 0.28 : simWidth * 0.22, 78);
+      var helixTurn = along * Math.PI * 2 * (wide ? 3.2 : 2.6);
+      if (wide) {
+        return {
+          x: pad + along * (simWidth - pad * 2),
+          y: cy + Math.sin(helixTurn) * helixRadius
+        };
+      }
+      return {
+        x: cx + Math.cos(helixTurn) * helixRadius,
+        y: pad + along * (simHeight - pad * 2)
+      };
+    }
+
+    function atomGoal(index, count, phase) {
+      var stops = [0, 0.22, 0.48, 0.74, 1];
+      var slot = 0;
+      var s;
+      for (s = 0; s < stops.length - 1; s++) {
+        if (phase >= stops[s]) slot = s;
+      }
+      var span = stops[slot + 1] - stops[slot];
+      var mix = span ? (phase - stops[slot]) / span : 0;
+      var from = placeAtom(index, count, slot);
+      var to = placeAtom(index, count, slot + 1);
+      return {
+        x: from.x + (to.x - from.x) * mix,
+        y: from.y + (to.y - from.y) * mix
+      };
+    }
+
+    function drawSim(moving) {
+      var count = atoms.length;
+      var i;
+      var j;
+      var ink = simColor("--ink");
+      var umber = simColor("--umber");
+      var moss = simColor("--moss");
+      if (moving) {
+        var maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var targetPhase = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+        simPhase += (targetPhase - simPhase) * 0.045;
+        for (i = 0; i < count; i++) {
+          var atom = atoms[i];
+          var goal = atomGoal(i, count, simPhase);
+          var ax = (goal.x - atom.x) * 0.05 + (Math.random() - 0.5) * 0.1;
+          var ay = (goal.y - atom.y) * 0.05 + (Math.random() - 0.5) * 0.1;
+          var mdx = atom.x - pointer.x;
+          var mdy = atom.y - pointer.y;
+          var md2 = mdx * mdx + mdy * mdy;
+          if (md2 < 8100 && md2 > 0.01) {
+            var md = Math.sqrt(md2);
+            var push = (90 - md) / 90 * 1.6;
+            ax += mdx / md * push;
+            ay += mdy / md * push;
+          }
+          if (atom.x < 10) ax += 0.45;
+          if (atom.x > simWidth - 10) ax -= 0.45;
+          if (atom.y < 10) ay += 0.45;
+          if (atom.y > simHeight - 10) ay -= 0.45;
+          atom.vx = (atom.vx + ax) * 0.84;
+          atom.vy = (atom.vy + ay) * 0.84;
+          atom.x += atom.vx;
+          atom.y += atom.vy;
+        }
+        for (i = 0; i < count; i++) {
+          for (j = i + 1; j < count; j++) {
+            var a = atoms[i];
+            var b = atoms[j];
+            var rx = a.x - b.x;
+            var ry = a.y - b.y;
+            var r2 = rx * rx + ry * ry;
+            if (r2 > 784 || r2 < 0.01) continue;
+            var dist = Math.sqrt(r2);
+            var repel = (28 - dist) / 28 * 0.22;
+            var fx = rx / dist * repel;
+            var fy = ry / dist * repel;
+            a.vx += fx;
+            a.vy += fy;
+            b.vx -= fx;
+            b.vy -= fy;
+          }
+        }
+      }
+      if (!moving) {
+        for (i = 0; i < count; i++) {
+          var parked = atomGoal(i, count, 0);
+          atoms[i].x = parked.x;
+          atoms[i].y = parked.y;
+          atoms[i].vx = 0;
+          atoms[i].vy = 0;
+        }
+      }
+      simCtx.clearRect(0, 0, simWidth, simHeight);
+      simCtx.lineWidth = 1;
+      simCtx.strokeStyle = ink;
+      simCtx.globalAlpha = 0.16;
+      simCtx.beginPath();
+      for (i = 0; i < count; i++) {
+        for (j = i + 1; j < count; j++) {
+          var left = atoms[i];
+          var right = atoms[j];
+          var bx = left.x - right.x;
+          var by = left.y - right.y;
+          var bond = bx * bx + by * by;
+          if (bond < 49 || bond > 900) continue;
+          simCtx.moveTo(left.x, left.y);
+          simCtx.lineTo(right.x, right.y);
+        }
+      }
+      simCtx.stroke();
+      simCtx.globalAlpha = 0.95;
+      for (i = 0; i < count; i++) {
+        var dot = atoms[i];
+        simCtx.fillStyle = dot.species ? moss : umber;
+        simCtx.beginPath();
+        simCtx.arc(dot.x, dot.y, dot.species ? 3.15 : 2.55, 0, Math.PI * 2);
+        simCtx.fill();
+      }
+      simCtx.globalAlpha = 1;
+    }
+
+    function runSim() {
+      if (simLoop) return;
+      simLoop = true;
+      function tick() {
+        drawSim(true);
+        if (document.hidden) {
+          simLoop = false;
+          return;
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    resizeSim();
+    if (reduceMotion) {
+      for (var n = 0; n < atoms.length; n++) {
+        var parked = atomGoal(n, atoms.length, 0);
+        atoms[n].x = parked.x;
+        atoms[n].y = parked.y;
+      }
+      drawSim(false);
+    } else {
+      runSim();
+    }
+
+    window.addEventListener("resize", function () {
+      resizeSim();
+      if (reduceMotion) drawSim(false);
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden && !reduceMotion) runSim();
+    });
+    window.addEventListener("pointermove", function (event) {
+      var rect = sim.getBoundingClientRect();
+      pointer.x = event.clientX - rect.left;
+      pointer.y = event.clientY - rect.top;
+      if (pointer.x < 0 || pointer.y < 0 || pointer.x > rect.width || pointer.y > rect.height) {
+        pointer.x = -9999;
+        pointer.y = -9999;
+      }
+    });
+    if (themeButton) {
+      themeButton.addEventListener("click", function () {
+        if (reduceMotion) drawSim(false);
+      });
+    }
+  }
 })();
