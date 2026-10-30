@@ -27,8 +27,9 @@
     <nav aria-label="Page">
       <a href="#work">Work</a>
       <a href="#research">Research</a>
+      <a href="#honors">Honors</a>
       <a href="#code">Code</a>
-      <a href="cv.html">CV</a>
+      <a href="assets/Awwal_Oladipupo_CV.pdf" download="Awwal_Oladipupo_CV.pdf">CV</a>
       <a href="#contact">Contact</a>
       <button class="theme" id="theme" type="button" aria-pressed="false" aria-label="Switch color theme">
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M16 14.5A6.5 6.5 0 0 1 9.2 4.4 6.5 6.5 0 1 0 16 14.5z"/></svg>
@@ -47,16 +48,18 @@
       </figure>
       <div class="hero-copy">
         <p class="lede">I build AI and high-performance software for chemistry, materials, and the sciences.</p>
-        <p class="role">I am a computational materials chemist and HPC software developer in the Lindsey Lab, advised by Rebecca Lindsey. Before Michigan I studied chemical and petroleum engineering at the University of Lagos.</p>
+        <p class="role">I am a computational materials chemist and HPC software developer in the Lindsey Lab, advised by Rebecca Lindsey. Before Michigan I graduated as valedictorian of the Faculty of Engineering at the University of Lagos, with first-class honours in petroleum and gas engineering.</p>
         <ul class="honors">
           <li>MICDE Fellow, 2026–2027</li>
+          <li>PI on two ACCESS supercomputing allocations</li>
+          <li>Best Oral Presentation, ChE Graduate Symposium, 2026</li>
           <li>People’s Choice, Three Minute Thesis, 2025</li>
         </ul>
         <ul class="hero-links">
           <li><a href="mailto:awwalola@umich.edu">awwalola@umich.edu</a></li>
           <li><a href="https://github.com/Awwal41">GitHub</a></li>
           <li><a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a></li>
-          <li><a href="assets/Awwal_Oladipupo_CV.pdf">CV (PDF)</a></li>
+          <li><a href="assets/Awwal_Oladipupo_CV.pdf" download="Awwal_Oladipupo_CV.pdf">Download CV</a></li>
         </ul>
       </div>
       <canvas class="sim" id="sim" aria-hidden="true"></canvas>
@@ -74,7 +77,7 @@
           <p class="item-meta"><span>2026</span><span>Research</span></p>
           <h3>TurboChIMES</h3>
           <p class="stake">A designer can try more chemistries before a long campaign.</p>
-          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis.</p>
+          <p>Accurate atomistic models often cost too much to use while a material is still being designed. TurboChIMES, my first-author preprint, stacks machine-learned interatomic models so the simulation stays faithful and becomes fast enough to search with. This is the story the audience chose as People’s Choice at Michigan’s Three Minute Thesis. The paper is submitted to the Journal of Chemical Theory and Computation, and I run it on Stampede3 as PI of its ACCESS allocation.</p>
           <p class="links"><a href="https://doi.org/10.26434/chemrxiv.15007194/v1">Preprint</a></p>
         </article>
         <article>
@@ -88,7 +91,7 @@
           <p class="item-meta"><span>2025</span><span>Software</span></p>
           <h3>MaterialSim</h3>
           <p class="stake">A researcher gets a real local run and an interpretation in the same conversation.</p>
-          <p>A molecular-dynamics study still begins as a specialist’s input deck. MaterialSim is a public agent that turns one sentence into the simulation, computes properties such as structure and transport, and explains what came back. The engine runs locally.</p>
+          <p>A molecular-dynamics study still begins as a specialist’s input deck. MaterialSim is a public agent that turns one sentence into the simulation, computes properties such as structure and transport, and explains what came back. The engine runs locally. I led the team that built it, it won the Visionary Award at the 2025 LLM Hackathon for Applications in Materials and Chemistry, and the paper is submitted to the Journal of Open Source Software.</p>
           <p class="links"><a href="https://github.com/Awwal41/MaterialSim">Source</a></p>
         </article>
       </div>
@@ -207,6 +210,24 @@
         </div>
       </article>
 
+      <article class="item">
+        <div class="item-meta">
+          <span>2023–</span>
+          <span>Research</span>
+        </div>
+        <div class="item-body">
+          <details class="fold">
+            <summary>
+              <span class="fold-title">Federally funded collaborations</span>
+              <span class="stake">The same models carry into energy, manufacturing, and defense materials.</span>
+            </summary>
+            <div class="fold-more">
+              <p>I do the computational modeling on several funded projects: ChIMES modeling of perovskite formation for solar materials and of membrane–catalyst design for manufacturing, both with the Department of Energy; a DARPA-funded collaboration on light-sensitive polymers for energetic materials; and atomistic modeling for aluminum–oxygen propulsion.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+
       <h3 class="subhead">Earlier</h3>
       <p class="note">From the University of Lagos through later collaborations, the papers use field data to see liquid loading, sand, and hydrate temperature early enough to act, and to weigh <a href="https://doi.org/10.3390/chemengineering10010001">oil recovery together with carbon storage</a>. Those losses are how domestic wells go offline, and the recovery work keeps carbon storage inside that same field decision. A related study improves biodiesel yield from waste fat by pairing experiment with computation.</p>
 
@@ -309,10 +330,10 @@
           <li>
             <details class="fold fold-brief">
               <summary>
-                <span class="fold-title">Early Android apps</span>
-                <span class="stake">A quiz, weather, training, drawing, places, and a project board, shipped as finished apps.</span>
+                <span class="fold-title">Android, for farmers and for practice</span>
+                <span class="stake">Smallholder farmers plan their land and produce from a phone.</span>
               </summary>
-              <p>I needed to learn how a complete mobile app fits together. They are listed under public code.</p>
+              <p>At Babban Gona, from intern to associate Android developer (2022–2023), I worked on the app farmers use to manage land and harvest. Before that I shipped my own quiz, weather, training, drawing, places, and project-board apps, listed under public code.</p>
             </details>
           </li>
         </ul>
@@ -322,7 +343,7 @@
     <section id="research" aria-labelledby="research-title">
       <div class="section-head">
         <h2 id="research-title">Research</h2>
-        <p><a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a> lists <span id="stat-citations">44</span> citations, an h-index of <span id="stat-h">4</span>, and an i10-index of <span id="stat-i10">1</span>. One figure with each paper. The <a href="cv.html">CV</a> has the full list.</p>
+        <p><a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a> lists <span id="stat-citations">44</span> citations, an h-index of <span id="stat-h">4</span>, and an i10-index of <span id="stat-i10">1</span>. One figure with each paper. The <a href="assets/Awwal_Oladipupo_CV.pdf" download="Awwal_Oladipupo_CV.pdf">CV</a> has the full list, including work submitted and in preparation.</p>
       </div>
       <ol class="paper-gallery">
         <li>
@@ -393,6 +414,20 @@
           </div>
         </li>
         <li>
+          <span class="year">2026</span>
+          <div>
+            <p class="talk-title">Multi-Layer Architecture for Machine-Learned Interatomic Models for Efficient Large-Scale Simulations</p>
+            <p class="talk-meta">Chemical Engineering Graduate Symposium, University of Michigan · Best Oral Presentation · with Rebecca Lindsey</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2026</span>
+          <div>
+            <p class="talk-title">Accelerating Molecular Simulations with Multilayer Machine-Learned Interatomic Potentials</p>
+            <p class="talk-meta">MICDE PhD student seminar series, University of Michigan</p>
+          </div>
+        </li>
+        <li>
           <span class="year">2025</span>
           <div>
             <p class="talk-title">Enhancing Efficiency of Machine-Learned Interatomic Models through a Multilayered Strategy</p>
@@ -406,6 +441,69 @@
             <p class="talk-meta">Three Minute Thesis, University of Michigan · People’s Choice · <a href="https://che.engin.umich.edu/2025/03/13/awwal-oladipupo-wins-peoples-choice-award-at-three-minute-thesis-competition/">Department note</a></p>
           </div>
         </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <p class="talk-title">Modification of Machine Learned Interatomic Potential Design Architecture to Increase Simulation Efficiency</p>
+            <p class="talk-meta">Midwest Thermodynamics and Statistical Mechanics Conference, Madison · with Rebecca Lindsey</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2024</span>
+          <div>
+            <p class="talk-title">Evaluating Efficacy of a New Transfer-Learning Strategy for Efficient Parameterization of the ChIMES Machine Learning Interatomic Potential</p>
+            <p class="talk-meta">Midwest Thermodynamics and Statistical Mechanics Conference, Ann Arbor · with Rebecca Lindsey</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="honors" aria-labelledby="honors-title">
+      <div class="section-head">
+        <h2 id="honors-title">Honors and service</h2>
+        <p>Computing time I am responsible for, recognition for the work, and what I give back to the field.</p>
+      </div>
+
+      <h3 class="subhead">Supercomputing allocations, as principal investigator</h3>
+      <ol class="talks">
+        <li>
+          <span class="year">2026–27</span>
+          <div>
+            <p class="talk-title">TurboChIMES: a multilayered machine-learned interatomic model for increased simulation efficiency</p>
+            <p class="talk-meta">ACCESS Explore award CHM260051 · 400,000 ACCESS credits on Stampede3</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025–26</span>
+          <div>
+            <p class="talk-title">Evaluating transferability of multilayered machine-learned interatomic potentials</p>
+            <p class="talk-meta">ACCESS allocation CHM250017 · 400,000 ACCESS credits on Stampede3 and Ranch storage</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="subhead">Honors</h3>
+      <ol class="talks">
+        <li><span class="year">2026</span><div><p class="talk-title">Best Oral Presentation, Material Design and Process Optimization track</p><p class="talk-meta">Chemical Engineering Graduate Symposium, University of Michigan</p></div></li>
+        <li><span class="year">2026</span><div><p class="talk-title">MICDE Fellowship</p><p class="talk-meta">Michigan Institute for Computational Discovery and Engineering</p></div></li>
+        <li><span class="year">2025–26</span><div><p class="talk-title">Rackham Conference Travel Grants</p><p class="talk-meta">University of Michigan, two years running</p></div></li>
+        <li><span class="year">2025</span><div><p class="talk-title">Visionary Award</p><p class="talk-meta">LLM Hackathon for Applications in Materials and Chemistry · MaterialSim</p></div></li>
+        <li><span class="year">2025</span><div><p class="talk-title">People’s Choice, Three Minute Thesis</p><p class="talk-meta">Engineering Graduate Symposium, University of Michigan</p></div></li>
+        <li><span class="year">2025–26</span><div><p class="talk-title">Tau Beta Pi and Sigma Xi</p><p class="talk-meta">Elected to the engineering honor society, and promoted to full member of the scientific research honor society</p></div></li>
+        <li><span class="year">2022</span><div><p class="talk-title">Best Engineering Graduate Award</p><p class="talk-meta">Nigerian Society of Engineers</p></div></li>
+        <li><span class="year">2022</span><div><p class="talk-title">Valedictorian and Dean’s Award, Faculty of Engineering</p><p class="talk-meta">University of Lagos · first-class honours, 4.93 of 5.00</p></div></li>
+        <li><span class="year">2022</span><div><p class="talk-title">Google Africa Developer Scholarship, and invited scholar at Stanford SERGE</p><p class="talk-meta">Before graduate school</p></div></li>
+      </ol>
+
+      <h3 class="subhead">Service and teaching</h3>
+      <ol class="talks">
+        <li><span class="year">2026</span><div><p class="talk-title">Graduate Student Instructor, CHE 466 Process Dynamics and Control</p><p class="talk-meta">University of Michigan</p></div></li>
+        <li><span class="year">2026–</span><div><p class="talk-title">Peer reviewer</p><p class="talk-meta">American Chemical Society journals and the Journal of Artificial Intelligence Research</p></div></li>
+        <li><span class="year">2026</span><div><p class="talk-title">Organizer and judge, Open Scientific Intelligence Hackathon</p><p class="talk-meta">More than 1,000 sign-ups and 105 project submissions</p></div></li>
+        <li><span class="year">2025–26</span><div><p class="talk-title">Co-chair, Engineering Graduate Symposium 2026</p><p class="talk-meta">College of Engineering, University of Michigan</p></div></li>
+        <li><span class="year">2026–</span><div><p class="talk-title">Leadership team, Center for Simulation and Data Intensive Research in Chemical Engineering</p><p class="talk-meta">Junior member and liaison to the director</p></div></li>
+        <li><span class="year">2026–</span><div><p class="talk-title">Peer mentor for first-year PhD students</p><p class="talk-meta">Department of Chemical Engineering</p></div></li>
+        <li><span class="year">2025–26</span><div><p class="talk-title">Judge, Switch Energy Alliance Global Energy Competition</p><p class="talk-meta">Student teams from 27 countries</p></div></li>
       </ol>
     </section>
 
@@ -434,7 +532,7 @@
     </div>
     <ul>
       <li><a href="mailto:awwalola@umich.edu">awwalola@umich.edu</a></li>
-      <li><a href="assets/Awwal_Oladipupo_CV.pdf">CV (PDF)</a></li>
+      <li><a href="assets/Awwal_Oladipupo_CV.pdf" download="Awwal_Oladipupo_CV.pdf">Download CV</a></li>
       <li><a href="https://github.com/Awwal41">GitHub</a></li>
       <li><a href="https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en">Google Scholar</a></li>
       <li><a href="https://orcid.org/0009-0006-3979-2078">ORCID</a></li>
