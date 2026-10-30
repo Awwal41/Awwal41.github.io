@@ -151,7 +151,15 @@ main {
 
 .hero .kicker,
 .hero h1,
+.hero .affil,
 .hero-copy { grid-column: 1; }
+
+.affil {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  animation: rise 0.9s ease 0.12s both;
+}
 
 .hero .contrib { grid-column: 1 / -1; margin-top: 2rem; }
 
@@ -209,9 +217,7 @@ main {
     align-items: start;
   }
 
-  body.home .hero .kicker { grid-column: 1 / -1; }
-
-  body.home .portrait { grid-row: 2 / span 2; margin-top: 0; }
+  body.home .portrait { grid-row: 1 / span 3; margin-top: 0.4rem; }
 
   body.home .sim {
     position: fixed;
@@ -964,6 +970,7 @@ footer ul {
   html { scroll-behavior: auto; }
   .hero .kicker,
   .hero h1,
+  .hero .affil,
   .hero-copy,
   .hero .contrib,
   .portrait,
