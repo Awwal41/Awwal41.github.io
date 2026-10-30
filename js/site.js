@@ -383,6 +383,33 @@
       }
       simCtx.fill();
       simCtx.globalAlpha = 1;
+      showSimNote(simPhase);
+    }
+
+    var simNote = document.getElementById("sim-note");
+    var simNoteSlot = -1;
+    var simNotes = [
+      "A field of particles, before it takes a shape.",
+      "Layers. One model inside the next.",
+      "What one system learned, carried to the next.",
+      "A structure the field can hold.",
+      "A search that draws inward."
+    ];
+
+    function showSimNote(phase) {
+      if (!simNote) return;
+      var stops = [0, 0.18, 0.4, 0.62, 0.82, 1];
+      var slot = 0;
+      var s;
+      for (s = 0; s < stops.length - 1; s++) {
+        if (phase >= stops[s]) slot = s;
+      }
+      var span = stops[slot + 1] - stops[slot];
+      var raw = span ? (phase - stops[slot]) / span : 0;
+      var shown = raw > 0.72 ? Math.min(slot + 1, 4) : slot;
+      if (shown === simNoteSlot) return;
+      simNoteSlot = shown;
+      simNote.textContent = simNotes[shown];
     }
 
     function runField() {
@@ -425,4 +452,28 @@
       });
     }
   }
+
+  var topBar = document.querySelector(".top");
+  var sectionLinks = document.querySelectorAll('.top nav a[href^="#"]');
+
+  function markPlace() {
+    if (topBar) {
+      if (window.scrollY > 8) topBar.classList.add("is-scrolled");
+      else topBar.classList.remove("is-scrolled");
+    }
+    var mark = "";
+    var y = window.scrollY + 96;
+    sectionLinks.forEach(function (link) {
+      var id = link.getAttribute("href").slice(1);
+      var section = document.getElementById(id);
+      if (section && section.offsetTop <= y) mark = id;
+    });
+    sectionLinks.forEach(function (link) {
+      if (link.getAttribute("href") === "#" + mark) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  markPlace();
+  window.addEventListener("scroll", markPlace, { passive: true });
 })();
