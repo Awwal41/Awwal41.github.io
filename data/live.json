@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T22:21:23Z",
+  "generatedAt": "2026-11-09T23:00:28Z",
   "scholar": {
     "profile": "https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en",
     "citations": 44,
@@ -9,6 +9,16 @@
   },
   "works": [
     {
+      "title": "From Knowledge to Action: Outcomes of the 2025 Large Language Model (LLM) Hackathon for Applications in Materials Science and Chemistry",
+      "year": 2026,
+      "venue": "arXiv (Cornell University)",
+      "type": "preprint",
+      "typeLabel": "Preprint",
+      "citedBy": 5,
+      "url": "https://doi.org/10.48550/arxiv.2605.03205",
+      "authors": "Aritra Roy, Kevin Shen, Andrew MacBride, and 97 others"
+    },
+    {
       "title": "Hierarchical transfer learning: an agile and equitable strategy for machine-learning interatomic models",
       "year": 2026,
       "venue": "npj Computational Materials",
@@ -17,16 +27,6 @@
       "citedBy": 4,
       "url": "https://doi.org/10.1038/s41524-025-01863-4",
       "authors": "Rebecca Lindsey, Awwal D. Oladipupo, Sorin Bastea, and 3 others"
-    },
-    {
-      "title": "From Knowledge to Action: Outcomes of the 2025 Large Language Model (LLM) Hackathon for Applications in Materials Science and Chemistry",
-      "year": 2026,
-      "venue": "arXiv (Cornell University)",
-      "type": "preprint",
-      "typeLabel": "Preprint",
-      "citedBy": 1,
-      "url": "https://doi.org/10.48550/arxiv.2605.03205",
-      "authors": "Aritra Roy, Kevin Shen, Andrew MacBride, and 97 others"
     },
     {
       "title": "2025 LLM Hackathon for Application in Chemistry and Materials Science Submissions Related to Knowledge Infrastructure",
@@ -54,7 +54,7 @@
       "venue": "ChemEngineering",
       "type": "article",
       "typeLabel": "Journal",
-      "citedBy": 2,
+      "citedBy": 4,
       "url": "https://doi.org/10.3390/chemengineering10010001",
       "authors": "Bukola Mepaiyeda, Michal Ezeh, O. A. Olafadehan, and 3 others"
     },
@@ -94,9 +94,9 @@
       "venue": "Journal of Petroleum Exploration and Production Technology",
       "type": "article",
       "typeLabel": "Journal",
-      "citedBy": 16,
+      "citedBy": 17,
       "url": "https://doi.org/10.1007/s13202-022-01525-x",
-      "authors": "Kingsley Eromosele Abhulimen and Awwal D. Oladipupo"
+      "authors": "Kingsley E. Abhulimen and Awwal D. Oladipupo"
     }
   ],
   "repos": [
@@ -119,13 +119,31 @@
       "homepage": ""
     },
     {
+      "name": "orthorhombify",
+      "description": "Turn monoclinic or triclinic crystals into near-orthorhombic supercells (no strain) and write LAMMPS ReaxFF+QEq inputs with starting charges.",
+      "language": "Python",
+      "url": "https://github.com/Awwal41/orthorhombify",
+      "stars": 0,
+      "updated": "2026-11-05",
+      "homepage": "https://awwal41.github.io/orthorhombify/"
+    },
+    {
       "name": "Droplet-Film-Theory-Development",
       "description": "Physics-informed droplet-film model for liquid loading in gas wells, with public documentation.",
       "language": "Jupyter Notebook",
       "url": "https://github.com/Awwal41/Droplet-Film-Theory-Development",
       "stars": 0,
-      "updated": "2026-04-10",
+      "updated": "2026-11-05",
       "homepage": "https://awwal41.github.io/Droplet-Film-Theory-Development/"
+    },
+    {
+      "name": "EZRA",
+      "description": "EZRA: Easy Zero-setup Routing Assistant for local & HPC LLMs download free/open models, personal agents, chat/serve, document parse, HPC staging, optional OpenClaw/Peekaboo/gog. Researcher-first for materials & chemistry.",
+      "language": "HTML",
+      "url": "https://github.com/Awwal41/EZRA",
+      "stars": 0,
+      "updated": "2026-11-04",
+      "homepage": "https://awwal41.github.io/EZRA/"
     },
     {
       "name": "wedin",
@@ -237,7 +255,7 @@
     }
   ],
   "contributions": {
-    "total": 1686,
+    "total": 1759,
     "colors": [
       "#9be9a8",
       "#40c463",
@@ -245,43 +263,6 @@
       "#216e39"
     ],
     "weeks": [
-      [
-        {
-          "date": "2025-11-02",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-03",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-04",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-05",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-06",
-          "count": 4,
-          "color": "#9be9a8"
-        },
-        {
-          "date": "2025-11-07",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-08",
-          "count": 0,
-          "color": "#ebedf0"
-        }
-      ],
       [
         {
           "date": "2025-11-09",
@@ -1711,13 +1692,13 @@
         },
         {
           "date": "2026-08-06",
-          "count": 25,
-          "color": "#40c463"
+          "count": 49,
+          "color": "#30a14e"
         },
         {
           "date": "2026-08-07",
-          "count": 15,
-          "color": "#9be9a8"
+          "count": 27,
+          "color": "#40c463"
         },
         {
           "date": "2026-08-08",
@@ -1728,8 +1709,8 @@
       [
         {
           "date": "2026-08-09",
-          "count": 29,
-          "color": "#40c463"
+          "count": 43,
+          "color": "#30a14e"
         },
         {
           "date": "2026-08-10",
@@ -1753,7 +1734,7 @@
         },
         {
           "date": "2026-08-14",
-          "count": 2,
+          "count": 15,
           "color": "#9be9a8"
         },
         {
@@ -1923,8 +1904,8 @@
         },
         {
           "date": "2026-09-15",
-          "count": 0,
-          "color": "#ebedf0"
+          "count": 1,
+          "color": "#9be9a8"
         },
         {
           "date": "2026-09-16",
@@ -2177,6 +2158,43 @@
         },
         {
           "date": "2026-11-02",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-03",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-04",
+          "count": 10,
+          "color": "#9be9a8"
+        },
+        {
+          "date": "2026-11-05",
+          "count": 2,
+          "color": "#9be9a8"
+        },
+        {
+          "date": "2026-11-06",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-07",
+          "count": 0,
+          "color": "#ebedf0"
+        }
+      ],
+      [
+        {
+          "date": "2026-11-08",
+          "count": 1,
+          "color": "#9be9a8"
+        },
+        {
+          "date": "2026-11-09",
           "count": 0,
           "color": "#ebedf0"
         }
