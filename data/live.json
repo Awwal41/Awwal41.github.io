@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T23:00:28Z",
+  "generatedAt": "2026-11-16T22:55:09Z",
   "scholar": {
     "profile": "https://scholar.google.com/citations?user=AO3d_BoAAAAJ&hl=en",
     "citations": 44,
@@ -54,7 +54,7 @@
       "venue": "ChemEngineering",
       "type": "article",
       "typeLabel": "Journal",
-      "citedBy": 4,
+      "citedBy": 5,
       "url": "https://doi.org/10.3390/chemengineering10010001",
       "authors": "Bukola Mepaiyeda, Michal Ezeh, O. A. Olafadehan, and 3 others"
     },
@@ -64,7 +64,7 @@
       "venue": "Petroleum Science and Engineering",
       "type": "article",
       "typeLabel": "Journal",
-      "citedBy": 1,
+      "citedBy": 2,
       "url": "https://doi.org/10.11648/j.pse.20250902.13",
       "authors": "Awwal D. Oladipupo, Isaac Johnson, Opeyemi Adebayo, and 2 others"
     },
@@ -94,7 +94,7 @@
       "venue": "Journal of Petroleum Exploration and Production Technology",
       "type": "article",
       "typeLabel": "Journal",
-      "citedBy": 17,
+      "citedBy": 20,
       "url": "https://doi.org/10.1007/s13202-022-01525-x",
       "authors": "Kingsley E. Abhulimen and Awwal D. Oladipupo"
     }
@@ -255,7 +255,7 @@
     }
   ],
   "contributions": {
-    "total": 1759,
+    "total": 1762,
     "colors": [
       "#9be9a8",
       "#40c463",
@@ -263,43 +263,6 @@
       "#216e39"
     ],
     "weeks": [
-      [
-        {
-          "date": "2025-11-09",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-10",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-11",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-12",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-13",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-14",
-          "count": 0,
-          "color": "#ebedf0"
-        },
-        {
-          "date": "2025-11-15",
-          "count": 0,
-          "color": "#ebedf0"
-        }
-      ],
       [
         {
           "date": "2025-11-16",
@@ -2195,6 +2158,43 @@
         },
         {
           "date": "2026-11-09",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-10",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-11",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-12",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-13",
+          "count": 3,
+          "color": "#9be9a8"
+        },
+        {
+          "date": "2026-11-14",
+          "count": 0,
+          "color": "#ebedf0"
+        }
+      ],
+      [
+        {
+          "date": "2026-11-15",
+          "count": 0,
+          "color": "#ebedf0"
+        },
+        {
+          "date": "2026-11-16",
           "count": 0,
           "color": "#ebedf0"
         }
